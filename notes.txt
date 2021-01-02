@@ -1,0 +1,35 @@
+questions/comments for Mark
+Lots of flexibility.
+blog name litlite?
+icon for top of homepage with name?
+page names (More About Me, Contact...)?
+Content for pages?
+Responsive Website: Works on both Mobile and PC/Laptop
+Color theme
+Fonts size and style
+
+
+27 Dec 2020
+
+Expectations
+Michael None
+
+Why am I doing this
+BoBiB (Black on Black in Black
+Positive contribution to Brother Mark's writing career.
+Get more experience designing websites and writing code.
+
+Final Product: A simple website that will give Mark and online presence.
+On a scale of 0-10 I believe the website will top out at a 6.
+
+Commitment: To work on the website as long as I have the inspiration 
+and health to do so. If Mark or Michael wishes to discontinue working on 
+the website no explanation is neccessary.
+
+Mark's choice as a beginning design template (lindatharpink.com)
+
+28 Dec 2020
+Make website Responsive (Works on PC/Laptop or Mobile device.
+https://www.w3schools.com/css/css_rwd_intro.asp
+
+30 Dec 2020

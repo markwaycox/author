@@ -1,0 +1,104 @@
+
+
+.myheader {
+	// border: 10px outset black;
+	  background-color: white;
+   height:100px
+}
+
+.divnamelogo {
+		float:left;
+	// border: 5px outset yellow;
+	   width:30%;
+	  // height:100%;
+	   margin-left:100px;
+	   padding: 20px 0;
+}
+
+.divmenu{
+	float:right;
+// border: 5px outset yellow;
+width:50%;
+ //height:100%;
+  //margin-right:100px;
+   padding: 20px 0;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: white;
+  overflow: hidden;
+  }
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: gray;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: gray;
+  color: black;
+}
+
+/* Add a color to the active/current link 
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+*/
+
+
+
+/*
+.div1 {
+  border: 5px outset red;
+  background-color: white;
+   height:100px
+  }
+*/
+ 
+/* 
+.div1a {
+ float:left;
+  border: 5px outset yellow;
+//define the width;
+width:30%;
+}
+*/
+
+
+
+.div2 {
+  border: 5px outset black;
+  background-color: grey;
+  text-align: center;
+  height:500px
+}
+
+.div3 {
+  border: 5px outset green;
+  background-color: blue;
+  height:300px
+}
+
+
+
+.div3a {
+ float:left;
+//define the width
+//width:50%
+}
+.div3b{
+float:right;
+//define the width
+//width:50%
+}
+
+
+
