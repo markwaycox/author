@@ -19,7 +19,13 @@
 * {box-sizing: border-box}
 
 
-  #testfont {
+.divtestfontwrapper{
+ text-align: center;
+  font-family: 'Tangerine', serif;
+        font-size: 32px;
+}
+
+  .divtestfont {
         font-family: 'Tangerine', serif;
         font-size: 48px;
 		width: 500px;
@@ -27,18 +33,26 @@
 		text-align: center;
       }
 
+
+.divnamewrapper{
+ text-align: center;
+  font-family: 'Tangerine', serif;
+        font-size: 32px;
+}
+
+
 .divname{
  font-family: 'Tangerine', serif;
- padding-top: 20px;
+// padding-top: 20px;
         font-size: 32px;
-		width: 500px;
+		width: 100%;
 		margin: auto;
 		text-align: center;
 }
 	
 
 	
-.divnamelogo{
+.divlogo{
 	 margin: auto;
   width: 20%;
  // border: 3px solid green;
@@ -90,9 +104,11 @@ margin: auto;
 
 <body>
 
-
- <div class="divname">Mark W. Aycox</div>
-<div class="divnamelogo">
+<div class="divnamewrapper">
+ <p>Mark W. Aycox</p>
+ </div>
+ 
+<div class="divlogo">
    <div class="img-container">
   <img src="images/pen0.jpg" alt="no photo available" style="width:100%">
   </div>
@@ -111,8 +127,9 @@ margin: auto;
 
 <br>
 
-
-<h1 id="testfont">This is My Books Page</h1>
+<div class="divtestfontwrapper">
+<p>This is My Books Page<p>
+</div>
 
 
  </body>
