@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='indie.xml' b:templateVersion='1.3.0' expr:dir='data:blog.languageDirection' 
-xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='indie.xml' b:templateVersion='1.3.0' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
     <meta content='width=device-width, initial-scale=1' name='viewport'/>
-     <title><data:view.title.escaped/></title>
+    <title><data:view.title.escaped/></title>
     <b:include data='blog' name='all-head-content'/>
     
     
+       
     <style>
 * {box-sizing: border-box}
 
@@ -102,6 +102,7 @@ text-align: center;
 
 </style>
 
+
     <b:skin version='1.3.0'><![CDATA[/*! normalize.css v3.0.1 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 /*
 <!-- Constants -->
@@ -120,7 +121,7 @@ text-align: center;
 
 <!-- Variable definitions -->
 
-<Variable name="keycolor" description="Main Color" type="color" default="#2196f3"  value="#9e9e9e"/>
+<Variable name="keycolor" description="Main Color" type="color" default="#2196f3"  value="#eeeeee"/>
 <Variable name="startSide" description="Start side in blog language" type="automatic" default="left" hideEditor="true" />
 <Variable name="endSide" description="End side in blog language" type="automatic" default="right" hideEditor="true" />
 
@@ -130,7 +131,7 @@ text-align: center;
       default="$(robotoNormal15)"  value="15px Roboto, sans-serif"/>
   <Variable name="body.text.color" description="Color"
       type="color"
-      default="#757575"  value="#797979"/>
+      default="#757575"  value="#868686"/>
 </Group>
 
 <Group description="Backgrounds">
@@ -142,10 +143,10 @@ text-align: center;
   <Variable name="body.background" description="Background"
       color="$(body.background.color)"
       type="background"
-      default="$(color) none repeat scroll top left"  value="#853103 url(none) no-repeat fixed top center /* Credit: duncan1890 (http://www.istockphoto.com/portfolio/duncan1890?platform=blogger) */"/>
+      default="$(color) none repeat scroll top left"  value="#eeeeee url(none) no-repeat scroll top center /* Credit: Michael Elkan (http://www.offset.com/photos/394244) */"/>
   <Variable name="body.background.color" description="Body background color"
       type="color"
-      default="#eee"  value="#efefef"/>
+      default="#eee"  value="#f3f3f3"/>
   <Variable name="posts.background.color" description="Post background color"
       type="color"
       default="#fff"  value="#ffffff"/>
@@ -159,13 +160,13 @@ text-align: center;
 <Group description="Links">
   <Variable name="body.link.color" description="Link color"
       type="color"
-      default="#2196f3"  value="#f32626"/>
+      default="#2196f3"  value="#f43a3a"/>
   <Variable name="body.link.visited.color" description="Visited link color"
       type="color"
-      default="$(body.link.color)"  value="#f15e0d"/>
+      default="$(body.link.color)"  value="#2196f3"/>
   <Variable name="body.link.hover.color" description="Link Hover Color"
       type="color"
-      default="$(body.link.color)"  value="#f15e0d"/>
+      default="$(body.link.color)"  value="#2196f3"/>
 </Group>
 
 <Group description="Blog title" selector="div.widget.Header">
@@ -189,7 +190,7 @@ text-align: center;
       default="700 normal $(size) $(family)"  value="700 normal $(size) $(family)"/>
   <Variable name="tabs.color" description="Text color"
       type="color"
-      default="#ccc"  value="#cdcdcd"/>
+      default="#ccc"  value="#d2d2d2"/>
   <Variable name="tabs.selected.color" description="Selected color"
       type="color"
       default="#fff"  value="#ffffff"/>
@@ -198,16 +199,16 @@ text-align: center;
       default="$(posts.background.color)"  value="#ffffff"/>
   <Variable name="tabs.overflow.color" description="Popup text color"
       type="color"
-      default="$(posts.text.color)"  value="#656565"/>
+      default="$(posts.text.color)"  value="#757575"/>
   <Variable name="tabs.overflow.selected.color" description="Popup selected color"
       type="color"
-      default="$(posts.title.color)"  value="#000000"/>
+      default="$(posts.title.color)"  value="#212121"/>
 </Group>
 
 <Group description="Posts" selector="div.widget.Blog">
   <Variable name="posts.title.color" description="Post title color"
       type="color"
-      default="#212121"  value="#3b3b3b"/>
+      default="#212121"  value="#5f5f5f"/>
   <Variable name="posts.title.font" description="Post title font"
       type="font"
       default="$(robotoBold22)"  value="bold 22px Roboto, sans-serif"/>
@@ -219,26 +220,26 @@ text-align: center;
       default="$(body.text.font)"  value="15px Roboto, sans-serif"/>
   <Variable name="posts.text.color" description="Post text color"
       type="color"
-      default="$(body.text.color)"  value="#656565"/>
+      default="$(body.text.color)"  value="#757575"/>
   <Variable name="posts.byline.color" description="Post byline color"
       type="color"
-      default="rgba(0, 0, 0, 0.54)"  value="rgba(55,55,55,0.537)"/>
+      default="rgba(0, 0, 0, 0.54)"  value="rgba(94,94,94,0.537)"/>
   <Variable name="blockquote.font" description="Blockquote font"
       type="font"
       default="$(robotoLightItalic15)"  value="italic 300 15px Roboto, sans-serif"/>
   <Variable name="blockquote.color" description="Blockquote color"
       type="color"
-      default="#444"  value="#4e4e4e"/>
+      default="#444"  value="#686868"/>
   <Variable name="posts.icons.color"
       description="Post icons color"
       type="color"
-      default="#707070"  value="#747474"/>
+      default="#707070"  value="#838383"/>
 </Group>
 
 <Group description="Search">
   <Variable name="search.input.color" description="Input color"
       type="color"
-      default="$(blog.title.color)"  value="#000000"/>
+      default="$(blog.title.color)"  value="#ffffff"/>
   <Variable name="search.input.font" description="Input font"
       type="font"
       default="$(robotoNormal16)"  value="16px Roboto, sans-serif"/>
@@ -254,56 +255,56 @@ text-align: center;
       default="$(posts.background.color)"  value="#ffffff"/>
   <Variable name="sharing.text.color" description="Sharing text color"
       type="color"
-      default="$(posts.title.color)"  value="#000000"/>
+      default="$(posts.title.color)"  value="#212121"/>
   <Variable name="sharing.icons.color"
       description="Sharing icons color"
       type="color"
-      default="$(sharing.text.color)"  value="#000000"/>
+      default="$(sharing.text.color)"  value="#212121"/>
 </Group>
 
 <Group description="Popular posts" selector="div.widget.PopularPosts">
   <Variable name="popularposts.background.color"
       description="Popular post background color"
       type="color"
-      default="$(body.background.color)"  value="#ebebeb"/>
+      default="$(body.background.color)"  value="#eeeeee"/>
   <Variable name="popularposts.byline.color"
       description="Popular post byline color"
       type="color"
-      default="$(posts.byline.color)"  value="rgba(0,0,0,0.537)"/>
+      default="$(posts.byline.color)"  value="rgba(0, 0, 0, 0.54)"/>
   <Variable name="popularposts.title.color"
       description="Popular post title color"
       type="color"
-      default="$(posts.title.color)"  value="#000000"/>
+      default="$(posts.title.color)"  value="#212121"/>
   <Variable name="popularposts.text.color"
       description="Popular post text color"
       type="color"
-      default="$(posts.text.color)"  value="#656565"/>
+      default="$(posts.text.color)"  value="#757575"/>
   <Variable name="popularposts.link.color"
       description="Popular post link color"
       type="color"
-      default="$(body.link.color)"  value="#f15e0d"/>
+      default="$(body.link.color)"  value="#2196f3"/>
 </Group>
 
 <Group description="Post navigation" selector='div.blog-pager'>
   <Variable name="posts.navigation.link.color"
       description="Post navigation links color"
       type="color"
-      default="$(body.link.color)"  value="#f15e0d"/>
+      default="$(body.link.color)"  value="#2196f3"/>
   <Variable name="posts.navigation.link.visited.color"
       description="Post navigation links visited color"
       type="color"
-      default="$(body.link.visited.color)"  value="#f15e0d"/>
+      default="$(body.link.visited.color)"  value="#2196f3"/>
   <Variable name="posts.navigation.link.hover.color"
       description="Post navigations links hover color"
       type="color"
-      default="$(body.link.hover.color)"  value="#f15e0d"/>
+      default="$(body.link.hover.color)"  value="#2196f3"/>
 </Group>
 
 <Group description="Sidebar" selector="div.sidebar-container">
   <Variable name="sidebar.backgroundColorTop"
       description="Background color (Top)"
       type="color"
-      default="#f7f7f7"  value="#f8f8f8"/>
+      default="#f7f7f7"  value="#fbfbfb"/>
   <Variable name="sidebar.backgroundColorTopHD"
       description="Background color (Top) - HD"
       type="color"
@@ -315,54 +316,54 @@ text-align: center;
   <Variable name="sidebar.separator.color"
       description="Separator color"
       type="color"
-      default="#ccc"  value="#cdcdcd"/>
+      default="#ccc"  value="#d2d2d2"/>
   <Variable name="widget.title.color"
       description="Gadget title color"
       type="color"
-      default="#212121"  value="#3b3b3b"/>
+      default="#212121"  value="#5f5f5f"/>
   <Variable name="sidebar.icons.color"
       description="Sidebar icons color"
       type="color"
-      default="#707070"  value="#747474"/>
+      default="#707070"  value="#838383"/>
 </Group>
 
 <Group description="Author profile" selector='.widget.Profile'>
   <Variable name="profile.title.color" description="Profile title color"
       type="color"
-      default="rgba(0,0,0,0.52)"  value="rgba(55,55,55,0.518)"/>
+      default="rgba(0,0,0,0.52)"  value="rgba(94,94,94,0.518)"/>
   <Variable name="profile.text.color" description="Profile text color"
       type="color"
-      default="rgba(0, 0, 0, 0.54)"  value="rgba(55,55,55,0.537)"/>
+      default="rgba(0, 0, 0, 0.54)"  value="rgba(94,94,94,0.537)"/>
   <Variable name="profile.link.color" description="Profile link color"
       type="color"
-      default="$(posts.title.color)"  value="#000000"/>
+      default="$(posts.title.color)"  value="#212121"/>
 </Group>
 
 <Group description="Labels" selector=".widget.Label">
   <Variable name="labels.text.color"
       description="Label text color"
       type="color"
-      default="$(body.link.color)"  value="rgba(0,0,0,0.537)"/>
+      default="$(body.link.color)"  value="rgba(0,0,0,0.54)"/>
   <Variable name="labels.background.color"
       description="Label background color"
       type="color"
       red="$(labels.text.color.red)"
       green="$(labels.text.color.green)"
       blue="$(labels.text.color.blue)"
-      default="rgba($red, $green, $blue, 0.05)"  value="#f4f4f4"/>
+      default="rgba($red, $green, $blue, 0.05)"  value="#f7f7f7"/>
 </Group>
 
 <Group description="Attribution" selector=".widget.Attribution">
   <Variable name="attribution.text.color" description="Attribution text color"
       type="color"
-      default="$(body.text.color)"  value="#656565"/>
+      default="$(body.text.color)"  value="#757575"/>
   <Variable name="attribution.link.color" description="Attribution link color"
       type="color"
-      default="$(body.link.color)"  value="#f15e0d"/>
+      default="$(body.link.color)"  value="#2196f3"/>
   <Variable name="attribution.icon.color" description="Attribution icon color"
       type="color"
       default="#707070"
-      hideEditor="true"  value="#747474"/>
+      hideEditor="true"  value="#838383"/>
 </Group>
 
 <Group description="Widths">
@@ -1851,7 +1852,6 @@ text-align:center;
 transition-property:opacity;
 -webkit-transition-duration:.5s;
 transition-duration:.5s
-color:black
 }
 .item-view .blog-name .subscribe-section-container,.sticky .blog-name .subscribe-section-container{
 margin:0 0 8px 0
@@ -1991,8 +1991,6 @@ opacity:0
 display:inline-block;
 width:calc(100% - 176px)
 }
-
-
 .Header h1{
 color:$(blog.title.color);
 font:$(blog.title.font);
@@ -2236,8 +2234,7 @@ font-size:14px
 }
 .subscribe-button{
 border-color:$(blog.title.color);
-//color:$(blog.title.color)
-color:black
+color:$(blog.title.color)
 }
 .sticky .subscribe-button{
 border-color:$(posts.text.color);
@@ -3054,9 +3051,8 @@ margin-left:40px
   </head>
 
   <body>
-                              
-
-   
+    
+       
 <div class='navbarwrapper'>
 <div class='navbar'>
   <a class='active' href='https://markwaycox.github.io/author/index.html'>Home</a>
@@ -3068,6 +3064,7 @@ margin-left:40px
                      
  
     
+    
     <b:class cond='data:view.isPreview' name='preview'/>
     <b:class cond='data:view.isSingleItem' name='item-view'/>
     <b:class cond='data:view.isArchive' name='archive-view'/>
@@ -3078,7 +3075,11 @@ margin-left:40px
     <b:include name='skipNavigation'/>
 
     <div class='page'>
-      
+      <div class='bg-photo-overlay'/>
+      <div class='bg-photo-container'>
+        <div class='bg-photo'/>
+      </div>
+
       <b:with value='data:widgets.AdSense any (w =&gt; w.sectionId == &quot;ads&quot;)' var='hasVerticalAds'>
         <div class='page_body'>
           <b:class cond='data:hasVerticalAds' name='has-vertical-ads'/>
@@ -3094,7 +3095,7 @@ margin-left:40px
                     <b:include data='{ button: true, iconClass: &quot;back-button rtl-reversible-icon flat-icon-button ripple&quot; }' name='backArrowIcon'/>
                   </a>
                 <b:else/>
-                 <!-- <b:include data='{ button: true, iconClass: &quot;hamburger-menu flat-icon-button ripple&quot; }' name='menuIcon'/> -->
+                <!--  <b:include data='{ button: true, iconClass: &quot;hamburger-menu flat-icon-button ripple&quot; }' name='menuIcon'/>  -->
                 </b:if>
 
                 <b:if cond='data:view.isLayoutMode or data:widgets any (w =&gt; w.sectionId == &quot;search_top&quot;)'>
@@ -3102,7 +3103,7 @@ margin-left:40px
                     <b:class cond='data:view.isSearch and data:view.search.query' name='focused'/>
                     <button class='search-expand touch-icon-button' expr:aria-label='data:messages.search.escaped'>
                       <div class='flat-icon-button ripple'>
-                        <b:include data='{ iconClass: &quot;search-expand-icon&quot; }' name='searchIcon'/>
+                     <!--   <b:include data='{ iconClass: &quot;search-expand-icon&quot; }' name='searchIcon'/>  -->
                       </div>
                     </button>
                     <b:section id='search_top' name='Search (Top)' showaddelement='false'>
@@ -3138,7 +3139,7 @@ margin-left:40px
 
                 <div class='blog-name container'>
                   <b:section class='container' id='header' name='Header' showaddelement='false'>
-                    <b:widget id='Header1' locked='true' title='Lit Up Lit (Header)' type='Header' version='2' visible='true'>
+                    <b:widget id='Header1' locked='true' title='Contact Me (Header)' type='Header' visible='true'>
                       <b:widget-settings>
                         <b:widget-setting name='displayUrl'/>
                         <b:widget-setting name='displayHeight'>0</b:widget-setting>
@@ -3164,7 +3165,6 @@ margin-left:40px
           background-position: <data:blog.locale.languageAlignment/>;
           background-repeat: no-repeat;
           background-size: cover;
-        color: black;
         }
       </style>
     </b:if>
@@ -3186,8 +3186,41 @@ margin-left:40px
           </div>
         </b:includable>
                     </b:widget>
+                    <b:widget id='ContactForm1' locked='false' title='Contact Me' type='ContactForm' visible='true'>
+                      <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+                      <b:includable id='content'>
+  <div class='contact-form-widget'>
+    <div class='form'>
+      <form name='contact-form'>
+        <p/>
+        <data:contactFormNameMsg/>
+        <br/>
+        <input class='contact-form-name' expr:id='data:widget.instanceId + &quot;_contact-form-name&quot;' name='name' size='30' type='text' value=''/>
+        <p/>
+        <data:contactFormEmailMsg/> <span style='font-weight: bolder;'>*</span>
+        <br/>
+        <input class='contact-form-email' expr:id='data:widget.instanceId + &quot;_contact-form-email&quot;' name='email' size='30' type='text' value=''/>
+        <p/>
+        <data:contactFormMessageMsg/> <span style='font-weight: bolder;'>*</span>
+        <br/>
+        <textarea class='contact-form-email-message' cols='25' expr:id='data:widget.instanceId + &quot;_contact-form-email-message&quot;' name='email-message' rows='5'/>
+        <p/>
+        <input class='contact-form-button contact-form-button-submit' expr:id='data:widget.instanceId + &quot;_contact-form-submit&quot;' expr:value='data:contactFormSendMsg' type='button'/>
+        <p/>
+        <div style='text-align: center; max-width: 222px; width: 100%'>
+          <p class='contact-form-error-message' expr:id='data:widget.instanceId + &quot;_contact-form-error-message&quot;'/>
+          <p class='contact-form-success-message' expr:id='data:widget.instanceId + &quot;_contact-form-success-message&quot;'/>
+        </div>
+      </form>
+    </div>
+  </div>
+</b:includable>
+                    </b:widget>
                   </b:section>
-                  <b:if cond='data:view.isLayoutMode or data:widgets any (w =&gt; w.sectionId == &quot;subscription&quot;)'>
+   <!-- begin delete subscribe -->               <b:if cond='data:view.isLayoutMode or data:widgets any (w =&gt; w.sectionId == &quot;subscription&quot;)'>
                     <section class='subscribe-section-container'>
                       <button class='subscribe-button pill-button'><b:eval expr='data:messages.subscribe'/></button>
                       <div class='subscribe-popup-container'>
@@ -3195,7 +3228,7 @@ margin-left:40px
                           <div role='document'>
                             <h3 class='subscribe-title' id='subscribe-title'><b:eval expr='data:messages.subscribeToThisBlog'/></h3>
                             <b:section id='subscription' name='Subscription' showaddelement='false'>
-                              <b:widget id='FollowByEmail1' locked='true' title='Follow by Email' type='FollowByEmail' visible='true'>
+                              <b:widget id='FollowByEmail1' locked='true' title='Follow by Email' type='FollowByEmail' visible='false'>
                                 <b:includable id='main'>
   <b:include name='widget-title'/>
   <b:include name='content'/>
@@ -3218,13 +3251,13 @@ margin-left:40px
                         </div>
                       </div>
                     </section>
-                  </b:if>
+                  </b:if>  <!-- end delete subscribe -->
                   <b:comment>Nav primarily intended for sections that consist of major navigation blocks.</b:comment>
-                  <nav role='navigation'>
+      <!-- begin delete nav -->            <nav role='navigation'>
                     <b:section class='clearboth' id='page_list_top' name='Page List (Top)' showaddelement='false'>
                       <b:widget cond='!data:view.isPost' id='PageList1' locked='true' title='' type='PageList' visible='false'>
                         <b:widget-settings>
-                          <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'http://markwaycoxauthor.blogspot.com/', 'title': 'Home', 'position': 0}}]]></b:widget-setting>
+                          <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'http://markwaycoxauthorcontactme.blogspot.com/', 'title': 'Home', 'position': 0}}]]></b:widget-setting>
                           <b:widget-setting name='homeTitle'>Home</b:widget-setting>
                         </b:widget-settings>
                         <b:includable id='main'>
@@ -3274,11 +3307,15 @@ margin-left:40px
 </b:includable>
                       </b:widget>
                     </b:section>
-                  </nav>
+        <!-- end delete nav -->          </nav>
+		
+		
+		
+		
                 </div>
               </div>
             </header>
-            <div>
+   <!-- begin delete bottom -->         <div>
               <b:section ads='true' class='vertical-ad-container' id='ads' name='Ads' showaddelement='false'>
                 <b:widget id='AdSense1' locked='true' title='' type='AdSense' visible='true'>
                   <b:includable id='main'>
@@ -3419,16 +3456,16 @@ margin-left:40px
           </div>
         </b:includable>
                   </b:widget>
-                  <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' visible='true'>
+                  <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
                     <b:widget-settings>
                       <b:widget-setting name='showDateHeader'>false</b:widget-setting>
-                      <b:widget-setting name='style.textcolor'>#f15e0d</b:widget-setting>
+                      <b:widget-setting name='style.textcolor'>#2196f3</b:widget-setting>
                       <b:widget-setting name='showShareButtons'>true</b:widget-setting>
                       <b:widget-setting name='showCommentLink'>true</b:widget-setting>
-                      <b:widget-setting name='style.urlcolor'>#000000</b:widget-setting>
+                      <b:widget-setting name='style.urlcolor'>#212121</b:widget-setting>
                       <b:widget-setting name='showAuthor'>false</b:widget-setting>
                       <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
-                      <b:widget-setting name='style.linkcolor'>#656565</b:widget-setting>
+                      <b:widget-setting name='style.linkcolor'>#757575</b:widget-setting>
                       <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
                       <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
                       <b:widget-setting name='timestampLabel'/>
@@ -3438,14 +3475,14 @@ margin-left:40px
                       <b:widget-setting name='showLocation'>true</b:widget-setting>
                       <b:widget-setting name='postLabelsLabel'/>
                       <b:widget-setting name='showTimestamp'>true</b:widget-setting>
-                      <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+                      <b:widget-setting name='postsPerAd'>3</b:widget-setting>
                       <b:widget-setting name='showBacklinks'>false</b:widget-setting>
                       <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-                      <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+                      <b:widget-setting name='showInlineAds'>true</b:widget-setting>
                       <b:widget-setting name='showReactions'>false</b:widget-setting>
                     </b:widget-settings>
                     <b:includable id='main'>
-          <b:include name='noContentPlaceholder'/>
+         
 
           <b:comment>Cap the total number of ads (widgets and inline ads).</b:comment>
           <b:with value='3' var='maxNumAds'>
@@ -3675,18 +3712,7 @@ margin-left:40px
           </a>
         </b:includable>
                     <b:includable id='post' var='post'>
-  <div class='post'>
-    <b:include data='post' name='postMeta'/>
-    <b:include data='post' name='postTitle'/>
-    <b:include name='headerByline'/>
-    <b:if cond='data:view.isSingleItem'>
-      <b:include data='post' name='postBody'/>
-    <b:else/>
-      <b:include data='post' name='postBodySnippet'/>
-      <b:include data='post' name='postJumpLink'/>
-    </b:if>
-    <b:include data='post' name='postFooter'/>
-  </div>
+  
 </b:includable>
                     <b:includable id='postBody' var='post'>
   <!-- If metaDescription is empty, use the post body as the schema.org description too, for G+/FB snippeting. -->
@@ -3940,42 +3966,9 @@ margin-left:40px
           </div>
         </b:includable>
                   </b:widget>
-                  <b:widget id='ContactForm1' locked='false' title='Contact Me' type='ContactForm' visible='true'>
-                    <b:includable id='main'>
-  <b:include name='widget-title'/>
-  <b:include name='content'/>
-</b:includable>
-                    <b:includable id='content'>
-  <div class='contact-form-widget'>
-    <div class='form'>
-      <form name='contact-form'>
-        <p/>
-        <data:contactFormNameMsg/>
-        <br/>
-        <input class='contact-form-name' expr:id='data:widget.instanceId + &quot;_contact-form-name&quot;' name='name' size='30' type='text' value=''/>
-        <p/>
-        <data:contactFormEmailMsg/> <span style='font-weight: bolder;'>*</span>
-        <br/>
-        <input class='contact-form-email' expr:id='data:widget.instanceId + &quot;_contact-form-email&quot;' name='email' size='30' type='text' value=''/>
-        <p/>
-        <data:contactFormMessageMsg/> <span style='font-weight: bolder;'>*</span>
-        <br/>
-        <textarea class='contact-form-email-message' cols='25' expr:id='data:widget.instanceId + &quot;_contact-form-email-message&quot;' name='email-message' rows='5'/>
-        <p/>
-        <input class='contact-form-button contact-form-button-submit' expr:id='data:widget.instanceId + &quot;_contact-form-submit&quot;' expr:value='data:contactFormSendMsg' type='button'/>
-        <p/>
-        <div style='text-align: center; max-width: 222px; width: 100%'>
-          <p class='contact-form-error-message' expr:id='data:widget.instanceId + &quot;_contact-form-error-message&quot;'/>
-          <p class='contact-form-success-message' expr:id='data:widget.instanceId + &quot;_contact-form-success-message&quot;'/>
-        </div>
-      </form>
-    </div>
-  </div>
-</b:includable>
-                  </b:widget>
                 </b:section>
               </main>
-            </div>
+    <!-- end delete bottom -->           </div>
             <b:section class='footer' id='footer' name='Footer' showaddelement='false' tag='footer'>
               <b:widget id='Attribution1' locked='true' title='' type='Attribution' visible='true'>
                 <b:widget-settings>
