@@ -105,25 +105,31 @@ text-align: center;
    height: 400px;
 }
 
-
-
-.row {
-  display: flex;
-}
-
-/* Create 2 equal columns that sits next to each other */
-.column {
-  flex: 50%;
-  padding: 40px;
-  height: 300px;
-}
-
-
 .divintro{
 	 margin: auto;
   width: 100%;
-   padding: 20px;
-   height: 500px;
+     height: 600px;
+}
+
+
+.introrow {
+  display: flex;
+  height: 600px;
+}
+
+/* Create 2 equal columns that sits next to each other */
+.introcolumn {
+  flex: 50%;
+  padding: 40px;
+  height: 600px;
+ }
+
+/* Center imgage */
+.introimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 
@@ -170,22 +176,43 @@ text-align: center;
 
 
 <br>
-
-<div class="row">
-  <div class="column">
-    <img src="images/markintro.png" alt="markintro.png">
+<!-- <intro"> -->
+<div class="introrow">
+  <div class="introcolumn">
+    <img src="images/markintro.png" alt="markintro.png" class="introimg">
   </div>
-  <div class="column">
-    <p>Mark's intro comments will go here...</p>
+  <div class="introcolumn">
+    <p>Desiderata
+GO PLACIDLY amid the noise and the haste, and remember what peace there may be in silence. As far as possible, without surrender, be on good terms with all persons.
+
+Speak your truth quietly and clearly; and listen to others, even to the dull and the ignorant; they too have their story.
+
+Avoid loud and aggressive persons; they are vexatious to the spirit. If you compare yourself with others, you may become vain or bitter, for always there will be greater and lesser persons than yourself.
+
+Enjoy your achievements as well as your plans. Keep interested in your own career, however humble; it is a real possession in the changing fortunes of time.
+
+Exercise caution in your business affairs, for the world is full of trickery. But let this not blind you to what virtue there is; many persons strive for high ideals, and everywhere life is full of heroism.
+
+Be yourself. Especially do not feign affection. Neither be cynical about love; for in the face of all aridity and disenchantment, it is as perennial as the grass.
+
+Take kindly the counsel of the years, gracefully surrendering the things of youth.
+
+Nurture strength of spirit to shield you in sudden misfortune. But do not distress yourself with dark imaginings. Many fears are born of fatigue and loneliness.
+
+Beyond a wholesome discipline, be gentle with yourself. You are a child of the universe no less than the trees and the stars; you have a right to be here.
+
+And whether or not it is clear to you, no doubt the universe is unfolding as it should. Therefore be at peace with God, whatever you conceive Him to be. And whatever your labors and aspirations, in the noisy confusion of life, keep peace in your soul. With all its sham, drudgery and broken dreams, it is still a beautiful world. Be cheerful. Strive to be happy.
+
+By Max Ehrmann © 1927
+Original text
+
+</p>
+
+
   </div>
  </div>
-
-
-
-<div class="divintro">
-
-</div>
-
+<!-- </div> -->
+<br>
 <div class="divcontactme">
  <h1 class="contactmeform"><a class="clickhref" href="https://markwaycoxauthorcontactme.blogspot.com/">Contact Me</a></h1>
 </div>
