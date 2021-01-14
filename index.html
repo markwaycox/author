@@ -146,7 +146,18 @@ text-align: center;
         font-size: 32px;
 		}
 
+.flex-container {
+    display: flex;
+}
 
+.flex-child {
+    flex: 1;
+    border: 2px solid yellow;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
 </style>
 </header>
 
@@ -176,6 +187,22 @@ text-align: center;
 
 
 <br>
+
+<div class="flex-container">
+
+  <div class="flex-child magenta">
+    Flex Column 1
+  </div>
+  
+  <div class="flex-child green">
+    Flex Column 2
+  </div>
+  
+</div>
+
+<br>
+
+
 <!-- <intro"> -->
 <div class="introrow">
   <div class="introcolumn">
