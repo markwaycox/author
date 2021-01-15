@@ -120,6 +120,39 @@ font-size: 27px;
 }
 
 
+/* Style Row of Book Covers   */
+/* Create three equal columns that floats next to each other */
+.columnbookcovers {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  }
+  
+  
+/* Center imgage inside its column*/
+.imgbookcovers {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.rowbookcovers:after {
+  content: "";
+  display: table;
+  clear: both;
+ }
+
+/* Responsive layout - makes the two columns stack on top of each 
+other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .columnintro {
+    width: 100%;
+  }
+}
+
+
 
 
 /* Contact ME */
@@ -207,6 +240,22 @@ Original text
 </div>
 
 <br>
+
+<div class="rowbookcovers">
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+    <img src="images/onemorerep.jpg" alt="onemorerep.jpg" class="imgintro">
+  </div>
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img src="images/onestone.jpg" alt="onestone.jpg" class="imgintro">
+  </div>
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img src="images/scentofsevenletters.jpg" alt="scentofsevenletters.jpg" class="imgintro">
+  </div>
+</div>
+
+
+
+
 
 <br>
 <div class="divcontactme">
