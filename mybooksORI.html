@@ -3,7 +3,6 @@
 
 
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>mybooks.html</title>
 
@@ -12,23 +11,39 @@
 
 <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baskervville">
-
+  <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
 
 
 <style>
 * {box-sizing: border-box}
 
-/* div for holding Mark's name */
+
+.divtestfontwrapper{
+ text-align: center;
+  font-family: 'Tangerine', serif;
+        font-size: 32px;
+}
+
+  .divtestfont {
+        font-family: 'Tangerine', serif;
+        font-size: 48px;
+		width: 500px;
+		margin: auto;
+		text-align: center;
+      }
+
+
 .divnamewrapper{
  text-align: center;
   font-family: 'Tangerine', serif;
         font-size: 32px;
-		}
+}
+
 
 .divname{
  font-family: 'Tangerine', serif;
+// padding-top: 20px;
         font-size: 32px;
 		width: 100%;
 		margin: auto;
@@ -36,7 +51,15 @@
 }
 	
 
-/* Nav Menu */
+	
+.divlogo{
+	 margin: auto;
+  width: 20%;
+ // border: 3px solid green;
+  padding: 20px;
+}
+
+
 .navbarwrapper{
 width: 40%;
 margin: auto;
@@ -68,7 +91,6 @@ margin: auto;
   background-color: none;
 }
 
-/* Makes Nav Menu Items vertical and centered on mobile device */
 @media screen and (max-width: 500px) {
   .navbar a {
     float: none;
@@ -77,36 +99,6 @@ margin: auto;
     text-align: center;
   }
 }
-
-
-
-
-
-
-/* Create two equal columns that floats next to each other */
-.columnintro {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  }
-  
-  
-  /* p for Mark's Bio Intro */
-.pintro{
- text-align: left;
-  font-family: 'Baskervville', serif;
-        font-size: 24px;
-		}
-  
-  
-/* Center imgage inside its column*/
-.imgintro {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
 
 
 
@@ -121,7 +113,7 @@ font-size: 27px;
 /* Create three equal columns that floats next to each other */
 .columnbookcovers {
   float: left;
-  width: 50%;
+  width: 33.33%;
   padding: 10px;
   }
   
@@ -150,51 +142,30 @@ other instead of next to each other */
 }
 
 
-
-
-/* Contact ME */
-.divcontactme{
- text-align: center;
-  font-family: 'Tangerine', serif;
-        font-size: 32px;
-		}
-
-/* FOOTER */
-.divfooter{
- text-align: center;
-  font-family: 'Tangerine', serif;
-        font-size: 32px;
-		}
-
-
-
 </style>
 </header>
 
 <body>
 
-
 <div class="divnamewrapper">
  <p>Mark W. Aycox</p>
  </div>
+ 
+<div class="divlogo">
+   <div class="img-container">
+  <img src="images/pen0.jpg" alt="no photo available" style="width:100%">
+  </div>
+  </div>
 
 
 <div class="navbarwrapper">
 <div class="navbar">
-  <a href="index.html" class="active">Home</a>
+  <a href="index.html">Home</a>
   <a href="mybio.html">My Bio</a>
-  <a href="mybooks.html">My Books</a>
-   <a href="https://markwaycoxauthor.blogspot.com/">My Blog</a>
+  <a href="mybooks.html" class="active">My Books</a>
+  <a href="https://markwaycoxauthor.blogspot.com/">My Blog</a>
 </div>
 </div>
-
-
-
-<br>
-
-  <img src="images/notesonwood.jpg" alt="no photo available" style="width:100%">
-
-<br>
 
 <br>
 
@@ -205,31 +176,17 @@ other instead of next to each other */
 <br>
 
 <div class="rowbookcovers">
-   <div class="columnbookcovers" style="background-color:#ffffff;">
-   <img src="images/onestone.jpg" alt="onestone.jpg" class="imgbookcovers">
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+    <img src="images/onemorerep.jpg" alt="onemorerep.jpg" class="imgintro">
   </div>
-   <div class="columnbookcovers" style="background-color:#ffffff;">
-    <img src="images/onestonebackcover.jpg" alt="onemorerep.jpg" class="imgbookcovers">
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img src="images/onestone.jpg" alt="onestone.jpg" class="imgintro">
   </div>
- </div>
-
-
-
-
-
-<br>
-<div class="divcontactme">
- <h1 class="contactmeform"><a class="clickhref" href="https://markwaycoxauthorcontactme.blogspot.com/">Contact Me</a></h1>
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img src="images/scentofsevenletters.jpg" alt="scentofsevenletters.jpg" class="imgintro">
+  </div>
 </div>
 
-<br>
 
-
-<div class="divfooter">
- <p>Footer will go here</p>
- </div>
-
-
-
-</body>
-</html> 
+ </body>
+</html>
