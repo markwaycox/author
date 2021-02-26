@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<script src="jquery-3.3.1.js"></script>
+<script>
+var name = "codemzy";var url = "http://anyorigin.com/go?url=" + encodeURIComponent("https://www.codewars.com/users/") + name + "&callback=?";$.get(url, function(response) {  console.log(response);});
+//var name = "codemzy";$.get('https://www.freecodecamp.com/' + name, function(response) {  console.log(response);});
+//var name = "codemzy";$.get('https://wasambetestshare.blogspot.com/p/testnewpage.html', function(response) {  console.log(response);});
+sourceWindow = window.open('https://wasambetestshare.blogspot.com/p/testnewpage.html');
+source = sourceWindow.document.getElementsByTagName('html')[0].innerHTML;
+var name = "codemzy";var url = "http://anyorigin.com/go?url=" + encodeURIComponent("'https://wasambetestshare.blogspot.com/p/testnewpage.html") +  + "&callback=?";$.get(url, function(response) {  console.log(response);});
+
+
+
+//showSource();
+//function showSource(){;
+function showSource(){
+testblogcontent1 = window.open('http://localhost/markwaycox/author/testblogcontent1.html');
+sourceWindow = window.open('https://wasambetestshare.blogspot.com/p/testnewpage.html');
+  // return;
+  sourceWindow.focus();
+    var source = "<html>";
+    source += sourceWindow.document.getElementsByTagName('html')[0].innerHTML;
+    source += "</html>";
+    //now we need to escape the html special chars, javascript has escape
+    //but this does not do what we want
+    source = source.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    //now we add <pre> tags to preserve whitespace
+    source = "<pre>"+source+"</pre>";
+    //now open the window and set the source as the content
+    //sourceWindow = window.open('','Source of page','height=800,width=800,scrollbars=1,resizable=1');
+   // sourceWindow = window.open('http://localhost/markwaycox/author/testblogcontent1.html');
+    
+	sourceWindow.document.write(source);
+    sourceWindow.document.close(); //close the document for writing, not the window
+    //give source window focus
+    if(window.focus) sourceWindow.focus();
+}  
+
+
+
+/*
+function showSource(){;
+    var source = "<html>";
+    source += document.getElementsByTagName('html')[0].innerHTML;
+    source += "</html>";
+    //now we need to escape the html special chars, javascript has escape
+    //but this does not do what we want
+    source = source.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    //now we add <pre> tags to preserve whitespace
+    source = "<pre>"+source+"</pre>";
+    //now open the window and set the source as the content
+    sourceWindow = window.open('','Source of page','height=800,width=800,scrollbars=1,resizable=1');
+    sourceWindow.document.write(source);
+    sourceWindow.document.close(); //close the document for writing, not the window
+    //give source window focus
+    if(window.focus) sourceWindow.focus();
+}  
+
+*/
+</script>
+<body>
+</body>
+
+
