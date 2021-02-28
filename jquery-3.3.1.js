@@ -9318,7 +9318,6 @@ jQuery.extend( {
 
 			// Complete
 			completeDeferred.fireWith( callbackContext, [ jqXHR, statusText ] );
-
 			if ( fireGlobals ) {
 				globalEventContext.trigger( "ajaxComplete", [ jqXHR, s ] );
 

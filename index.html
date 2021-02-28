@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-
+<!-- Blogger API Credentials Key AIzaSyDmc5hL--7l3tgoLD4Mazo-VR1kbntsc_g -->
 <head>
+<script src="jquery-3.3.1.js"></script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>index.html</title>
@@ -59,7 +61,7 @@ margin: auto;
   text-align: center;
     padding: 14px 16px;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 18px;
 }
 
 .navbar a:hover {
@@ -84,7 +86,7 @@ margin: auto;
 
 
 
-
+/*Styke Intro*/
 /* Create two equal columns that floats next to each other */
 .columnintro {
   float: left;
@@ -97,7 +99,7 @@ margin: auto;
 .pintro{
  text-align: left;
   font-family: 'Baskervville', serif;
-        font-size: 24px;
+        font-size: 18px;
 		}
 		
 /* styles LIT UP LIT font */		
@@ -195,7 +197,7 @@ other instead of next to each other */
   
   .pintheworks {
   font-family: 'Baskervville', serif;
-        font-size: 16px;
+        font-size: 18px;
   margin-top: 50px;
   margin-bottom: 100px;
   margin-right: 450px;
@@ -248,11 +250,47 @@ other instead of next to each other */
 
 
 
+/*Style blogtoweb starts here */
+/* Style "rowblogtoweb" */
+.rowblogtoweb{
+font-family: 'Baskervville', serif;
+      }
+
+
+/* Style columnblogtoweb  */
+/* Create three equal columns that floats next to each other */
+.columnblogtoweb {
+  float: left;
+  width: 33.33%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+ 
+		background-color: white;
+  }
+  
+  .post-body entry-content float-container{
+   font-family: 'Baskervville', serif;
+        font-size: 18px;
+  }
+  
+
+/* Clear floats after the row/columns */
+.rowblogtoweb:after {
+  content: "";
+  display: table;
+  clear: both;
+ }
+
+
+/*Style blogtowe ends here */
+
 </style>
 </header>
 
 <body>
-
+<div id="content"></div>
 <div class="divnamewrapper">
  <p>Mark W. Aycox</p>
  </div>
@@ -369,6 +407,155 @@ Stay tuned-in for more later.
   </div>
 
 <br>
+<br>
+
+<!--blogtoweb html starts here-->
+<br>
+
+<div class="rowblogtoweb">
+  <div class="columnblogtoweb" style="background-color:#ffffff;">
+   <p id="pblogtoweb1">pblogtoweb1</p>
+  </div>
+  <div class="columnblogtoweb" style="background-color:#ffffff;">
+   <p id="pblogtoweb2">pblogtoweb2</p>
+  </div>
+  <div class="columnblogtoweb" style="background-color:#ffffff;">
+   <p id="pblogtoweb3">pblogtoweb3</p>
+  </div>
+</div>
+
+<br>
+
+
+<!--blogtoweb html ends here-->
+
+<!--blogtoweb javascript starts here-->
+<script>
+<!-- Blogger API Credentials Key AIzaSyDmc5hL--7l3tgoLD4Mazo-VR1kbntsc_g -->
+//$.ajax("https://www.googleapis.com/blogger/v3/blogs/5039479718685240371/posts?callback=handleResponse&key=AIzaSyDxfWmXTRnO5yIp25NvuUEBWKSa_5mqjHA")
+$.ajax("https://www.googleapis.com/blogger/v3/blogs/5039479718685240371/posts?callback=handleResponse&key=AIzaSyDmc5hL--7l3tgoLD4Mazo-VR1kbntsc_g")
+
+function handleResponse(response) {
+  //var post_number = Object.keys(response.items).length; //number of posts
+  for (i = 0; i < response.items.length; i++) {
+    var titleHtml = '<div id="post' + (i + 1) + '" class="post"><p>' + response.items[i].title + '</p></div>';
+    $('#content').append(titleHtml);
+  }
+}
+//var gg = Get https://www.googleapis.com/blogger/v3/blogs/byurl?url=http://code.blogger.com/;
+//var blogtowebvar = Get https://www.googleapis.com/blogger/v3/blogs/byurl?url=https://markwaycoxauthor.blogspot.com/p/blog-to-web-1.html;
+
+whateverorigin1();
+whateverorigin2();
+whateverorigin3();
+//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html
+//whateveroriginORI(); //I think it's working even on repeated runs.
+
+
+// this works $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html') + '&callback=?', function(data){
+	//alert(data.contents);
+	//});
+	
+
+function whateveroriginORI(){
+$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-1.html') + '&callback=?', function(data){
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-2.html') + '&callback=?', function(data){
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-3.html') + '&callback=?', function(data){
+
+	results = (data.contents);
+	whateverorigin1(); //Searches and Parses ---results--- to final text for display
+
+	});
+	}	
+  
+
+
+
+function whateverorigin1ORI() {
+
+
+//alert (results);
+ // var str = "Visit W3Schools!"; 
+ console.log (results);
+  var str = (results); 
+ // var n = str.search("W3Schools");
+  var n1 = str.search("<div class='post-body entry-content float-container' id='post-body");
+ n1 = n1 + 88;
+  //This caused error when I on Mark's Blot To Web page 
+  //var n2 = str.search("<div class='post-sidebar invisible'>");
+  var n2 = str.search("&nbsp; &nbsp;&nbsp;");
+  
+   var res = str.substring(n1, n2);
+    console.log (res);
+	//document.getElementById("demo").innerHTML = res;
+	 document.getElementById("pblogtoweb1").innerHTML = res;
+} 
+
+
+function whateverorigin1(){
+
+// this works $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html') + '&callback=?', function(data){
+	//alert(data.contents);
+$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-1.html') + '&callback=?', function(data){
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-2.html') + '&callback=?', function(data){
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-3.html') + '&callback=?', function(data){
+
+	results = (data.contents);
+	//console.log (results);
+	var str = (results); 
+  var n1 = str.search("<div class='post-body");
+ var n2 = str.search("class='post-bottom");
+    var res = str.substring(n1, n2);
+   document.getElementById("pblogtoweb1").innerHTML = res;
+		});
+	}	
+
+
+
+
+function whateverorigin2(){
+
+// this works $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html') + '&callback=?', function(data){
+	//alert(data.contents);
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-1.html') + '&callback=?', function(data){
+$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-2.html') + '&callback=?', function(data){
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-3.html') + '&callback=?', function(data){
+
+	results = (data.contents);
+	//console.log (results);
+	var str = (results); 
+  var n1 = str.search("<div class='post-body");
+ var n2 = str.search("class='post-bottom");
+    var res = str.substring(n1, n2);
+   document.getElementById("pblogtoweb2").innerHTML = res;
+		});
+	}	
+
+
+
+function whateverorigin3(){
+
+// this works $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html') + '&callback=?', function(data){
+	//alert(data.contents);
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-1.html') + '&callback=?', function(data){
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-2.html') + '&callback=?', function(data){
+$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-3.html') + '&callback=?', function(data){
+
+	results = (data.contents);
+	//console.log (results);
+	var str = (results); 
+  var n1 = str.search("<div class='post-body");
+ var n2 = str.search("class='post-bottom");
+    var res = str.substring(n1, n2);
+   document.getElementById("pblogtoweb3").innerHTML = res;
+		});
+	}	
+
+</script>
+<!--javascript html ends here-->
+
+
+
 <br>
 <div class="divcontactme">
  <h1 class="contactmeform"><a class="clickhref" href="https://markwaycoxauthorcontactme.blogspot.com/">Contact Me</a></h1>

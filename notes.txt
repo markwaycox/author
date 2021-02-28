@@ -1,3 +1,6 @@
+28 Feb 2021
+Blogger API Credentials Key AIzaSyDmc5hL--7l3tgoLD4Mazo-VR1kbntsc_g
+
 27 Feb 2021
 function showSource(){;
     var source = "<html>";

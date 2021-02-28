@@ -1,44 +1,40 @@
 <!DOCTYPE html>
 <html>
+<head>
 <script src="jquery-3.3.1.js"></script>
+
 <script>
-var name = "codemzy";var url = "http://anyorigin.com/go?url=" + encodeURIComponent("https://www.codewars.com/users/") + name + "&callback=?";$.get(url, function(response) {  console.log(response);});
-//var name = "codemzy";$.get('https://www.freecodecamp.com/' + name, function(response) {  console.log(response);});
-//var name = "codemzy";$.get('https://wasambetestshare.blogspot.com/p/testnewpage.html', function(response) {  console.log(response);});
-sourceWindow = window.open('https://wasambetestshare.blogspot.com/p/testnewpage.html');
-source = sourceWindow.document.getElementsByTagName('html')[0].innerHTML;
-var name = "codemzy";var url = "http://anyorigin.com/go?url=" + encodeURIComponent("'https://wasambetestshare.blogspot.com/p/testnewpage.html") +  + "&callback=?";$.get(url, function(response) {  console.log(response);});
+//var will go here
+var results = "";
+</script>
 
 
+<script>
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html') + '&callback=?', function(data){
+//	alert(data.contents);
+//	});
+</script>
 
-//showSource();
-//function showSource(){;
-function showSource(){
-testblogcontent1 = window.open('http://localhost/markwaycox/author/testblogcontent1.html');
-sourceWindow = window.open('https://wasambetestshare.blogspot.com/p/testnewpage.html');
-  // return;
-  sourceWindow.focus();
-    var source = "<html>";
-    source += sourceWindow.document.getElementsByTagName('html')[0].innerHTML;
-    source += "</html>";
-    //now we need to escape the html special chars, javascript has escape
-    //but this does not do what we want
-    source = source.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    //now we add <pre> tags to preserve whitespace
-    source = "<pre>"+source+"</pre>";
-    //now open the window and set the source as the content
-    //sourceWindow = window.open('','Source of page','height=800,width=800,scrollbars=1,resizable=1');
-   // sourceWindow = window.open('http://localhost/markwaycox/author/testblogcontent1.html');
-    
-	sourceWindow.document.write(source);
-    sourceWindow.document.close(); //close the document for writing, not the window
-    //give source window focus
-    if(window.focus) sourceWindow.focus();
-}  
+<script>
+function anyorigin(){
+$.getJSON('https://web.archive.org/web/20180807170914/http://anyorigin.com/go?url=https%3A//wasambetestshare.blogspot.com/p/testnewpageedithtml.html&callback=?', function(data){
+	$('#output').html(data.contents);
+});
+}
 
+function indiaNotWorking(){
+$.getJSON('http://allorigins.me/get?url=https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html&callback=?', function(data){
+console.log(data);
+});
+}
+
+function indiaNotWorking1(){
+$.getJSON('http://allorigins.me/get?url=https%3A//timesofindia.indiatimes.com/sports/asian-games/such-a-long-walk-from-living-in-cowshed-to-asiad-medallist/articleshow/65361646.cms&callback=?', function(data){
+console.log(data);
+});
+}
 
 
-/*
 function showSource(){;
     var source = "<html>";
     source += document.getElementsByTagName('html')[0].innerHTML;
@@ -56,9 +52,210 @@ function showSource(){;
     if(window.focus) sourceWindow.focus();
 }  
 
+
+
+
+
+// with fetch
+function wraw(){
+fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://api.allorigins.win/raw?url=https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html')}`)
+.then(response => {
+	if (response.ok) return response.json()
+	throw new Error('Network response was not ok.')
+})
+.then(data => console.log(data.contents));
+
+// with JQuery
+$.getJSON('http://api.allorigins.win/get?url=https%3A//api.allorigins.win/raw%3Furl%3Dhttps%3A//wasambetestshare.blogspot.com/p/testnewpageedithtml.html&callback=?', function (data) {
+	$('#output').html(data.contents);
+});
+}
+
+
+//http://api.allorigins.win/get?url= 
+//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html
+
+
+
+//Example code
+function wfetchexample(){
+fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html')}`)
+.then(response => {
+	if (response.ok) return response.json()
+	throw new Error('Network response was not ok.')
+})
+.then(data => console.log(data.contents));
+}
+
+// with JQuery
+//$.getJSON('http://api.allorigins.win/get?url=https%3A//wasambetestshare.blogspot.com/p/testnewpageedithtml.html&callback=?', function (data) {
+//	$('#output').html(data.contents);
+//});
+
+
+
+function wjquery(){
+// with JQuery
+$.getJSON('http://api.allorigins.win/get?url=https%3A//wasambetestshare.blogspot.com/&callback=?', function (data) {
+	$('#output').html(data.contents);
+	//console.log(contents);
+//document.write(contents);
+});
+}
+
+function wfetch(){
+// with fetch
+fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://wasambetestshare.blogspot.com/')}`)
+.then(response => {
+	if (response.ok) return response.json()
+	throw new Error('Network response was not ok.')
+})
+.then(data => console.log(data.contents));
+//not working console.log(contents);
+//not working document.write(contents);
+}
+
+
+
+function wfetch1(){
+// with fetch
+fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://wasambegmail.blogspot.com/p/test-pages-1.html/')}`)
+.then(response => {
+	if (response.ok) return response.json()
+	throw new Error('Network response was not ok.')
+})
+.then(data => console.log(data.contents));
+//not working console.log(contents);
+//not working document.write(contents);
+}
+
+
+
+
+
+</script>
+</head>
+
+
+<body>
+
+<p id="demo1">demo1</p>
+<br>
+
+<p id="demo2">demo2</p>
+<br>
+<p id="demo">demo</p>
+
+<p id="blogtoweb">Blog to Web</p>
+
+
+
+<script>
+//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html
+
+
+whateverorigin(); //I think it's working even on repeated runs.
+
+
+function whateverorigin(){
+//Use It
+//Usage is similar to anyorigin. For example, to fetch the data from http://google.com with jQuery, use this snippet:
+
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://google.com') + '&callback=?', function(data){
+//alert(data.contents);
+
+// this works $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html') + '&callback=?', function(data){
+	//alert(data.contents);
+$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://wasambetestshare.blogspot.com/p/blog-to-web-1.html') + '&callback=?', function(data){
+	results = (data.contents);
+	whateverorigin1(); //Searches and Parses ---results--- do final text for display
+
+	});
+	
+	/*
+	console.log(data.contents);
+	results = (data.contents);
+	var demovar = document.getElementById("demo");
+	demovar.innerHTML = "Paragraph changed!";
+	//var demo1var = document.getElementById("demo1");
+	//demo1var.innerHTML = results;
+	*/
+	}	
+  
+
+
+
+function whateverorigin1() {
+
+
+//alert (results);
+ // var str = "Visit W3Schools!"; 
+ console.log (results);
+  var str = (results); 
+ // var n = str.search("W3Schools");
+ var n1 = str.search("<div class='post-body entry-content float-container' id='post-body");
+ n1 = n1 + 88;
+  var n2 = str.search("<div class='post-sidebar invisible'>");
+  var demo1var = document.getElementById ("demo1");
+  var demo2var = document.getElementById ("demo2");
+   document.getElementById("demo1").innerHTML = n1;
+   document.getElementById("demo2").innerHTML = n2;
+   var res = str.substring(n1, n2);
+    console.log (res);
+	//document.getElementById("demo").innerHTML = res;
+	 document.getElementById("blogtoweb").innerHTML = res;
+} 
+
+</script>
+
+<script>
+function myFunction() {
+  var str = "Hello world!";
+  var res = str.substring(1, 4);
+  document.getElementById("demo").innerHTML = res;
+}
+</script>
+
+
+
+
+<script>
+/*
+//https://allorigins.win/ 
+//demo below
+
+// with fetch
+fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://wasambetestshare.blogspot.com/')}`)
+.then(response => {
+	if (response.ok) return response.json()
+	throw new Error('Network response was not ok.')
+})
+.then(data => console.log(data.contents));
+
+// with JQuery
+$.getJSON('http://api.allorigins.win/get?url=https%3A//wasambetestshare.blogspot.com/&callback=?', function (data) {
+	$('#output').html(data.contents);
+});
+
+
+
+// with fetch
+fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://wasambetestshare.blogspot.com/')}`)
+.then(response => {
+	if (response.ok) return response.json()
+	throw new Error('Network response was not ok.')
+})
+.then(data => console.log(data.contents));
+
+// with JQuery
+$.getJSON('http://api.allorigins.win/get?url=https%3A//wasambetestshare.blogspot.com/&callback=?', function (data) {
+	$('#output').html(data.contents);
+});
+
 */
 </script>
-<body>
+
+
 </body>
 
 
