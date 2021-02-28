@@ -432,24 +432,12 @@ Stay tuned-in for more later.
 <!--blogtoweb javascript starts here-->
 <script>
 <!-- Blogger API Credentials Key AIzaSyDmc5hL--7l3tgoLD4Mazo-VR1kbntsc_g -->
-//$.ajax("https://www.googleapis.com/blogger/v3/blogs/5039479718685240371/posts?callback=handleResponse&key=AIzaSyDxfWmXTRnO5yIp25NvuUEBWKSa_5mqjHA")
-$.ajax("https://www.googleapis.com/blogger/v3/blogs/5039479718685240371/posts?callback=handleResponse&key=AIzaSyDmc5hL--7l3tgoLD4Mazo-VR1kbntsc_g")
-
-function handleResponse(response) {
-  //var post_number = Object.keys(response.items).length; //number of posts
-  for (i = 0; i < response.items.length; i++) {
-    var titleHtml = '<div id="post' + (i + 1) + '" class="post"><p>' + response.items[i].title + '</p></div>';
-    $('#content').append(titleHtml);
-  }
-}
-//var gg = Get https://www.googleapis.com/blogger/v3/blogs/byurl?url=http://code.blogger.com/;
-//var blogtowebvar = Get https://www.googleapis.com/blogger/v3/blogs/byurl?url=https://markwaycoxauthor.blogspot.com/p/blog-to-web-1.html;
 
 whateverorigin1();
 whateverorigin2();
 whateverorigin3();
 //https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html
-//whateveroriginORI(); //I think it's working even on repeated runs.
+whateveroriginORI(); //I think it's working even on repeated runs.
 
 
 // this works $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html') + '&callback=?', function(data){
