@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Google Search Criteria</P>
+<p>
+how to convert an array of objects to a string</P>
+
+<p>link from above search</P
+<p>https://stackoverflow.com/questions/1018750/how-to-convert-object-array-to-string-array-in-java</P>
+
+<p>the below from W3Schools
+https://www.w3schools.com/js/js_arrays.asp</P>
+
+<h2>JavaScript Arrays</h2>
+
+<p id="demo"></p>
+
+<script>
+//Array Elements Can Be Objects
+//JavaScript variables can be objects. Arrays are special kinds of objects.
+//Because of this, you can have variables of different types in the same Array.
+
+//You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:
+//Objects use names to access its "members". In this example, person.firstName returns John:
+//Object:
+var person = {firstName:"John", lastName:"Doe", age:46};
+console.log(person["firstName"]);
+
+
+var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars;
+
+var x = cars.length;   // The length property returns the number of elements
+var y = cars.sort();   // The sort() method sorts arrays
+
+
+nestedArr = [[1, 2, 3], [4, 5, 6], [7, 8, 9, 10, 11, 12]];
+for (i = 0; i < nestedArr.length; i++) {
+  for (j = 0; j < nestedArr[i].length; j++) {
+    console.log(nestedArr[i][j]);
+  }
+}
+</script>
+
+
+<p>
+JavaScript arrays are used to store multiple values in a single variable.
+
+Example
+var cars = ["Saab", "Volvo", "BMW"];
+What is an Array?
+An array is a special variable, which can hold more than one value at a time.
+
+If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
+
+var car1 = "Saab";
+var car2 = "Volvo";
+var car3 = "BMW";
+However, what if you want to loop through the cars and find a specific one? 
+And what if you had not 3 cars, but 300?
+
+The solution is an array!
+
+An array can hold many values under a single name, and you can access the values by referring to an index number.
+
+Creating an Array
+Using an array literal is the easiest way to create a JavaScript Array.
+
+Syntax:
+
+var array_name = [item1, item2, ...];      
+Example
+var cars = ["Saab", "Volvo", "BMW"];
+Spaces and line breaks are not important. A declaration can span multiple lines:
+
+Example
+var cars = [
+  "Saab",
+  "Volvo",
+  "BMW"
+];
+<p/>
+
+
+
+
+
+
+
+<h2>JavaScript Arrays</h2>
+
+<p>Array.forEach() calls a function for each array element.</p>
+
+<p>Array.forEach() is not supported in Internet Explorer 8 or earlier.</p>
+
+<p id="demoforeach"></p>
+
+<script>
+var fruits, text;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+text = "<ul>";
+fruits.forEach(myFunction);
+text += "</ul>";
+document.getElementById("demoforeach").innerHTML = text;
+console.log(text);
+
+function myFunction(value) {
+  text += "<li>" + value + "</li>";
+} 
+</script>
+
+
+
+<h2>JavaScript Arrays</h2>
+
+<p>The push method appends a new element to an array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demopush"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demopush").innerHTML = fruits;
+
+function myFunction() {
+  fruits.push("Lemon");
+  document.getElementById("demopush").innerHTML = fruits;
+}
+</script>
+
+
+
+<h2>JavaScript Arrays</h2>
+
+<p>Adding elements with high indexes can create undefined "holes" in an array.</p>
+
+<p id="demoholes"></p>
+
+<script>
+var fruits, text, fLen, i;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[6] = "Lemon";
+
+fLen = fruits.length;
+text = "";
+for (i = 0; i < fLen; i++) {
+  text += fruits[i] + "<br>";
+}
+document.getElementById("demoholes").innerHTML = text;
+</script>
+
+
+<h2>JavaScript Arrays</h2>
+<p>If you use a named index when accessing an array, 
+JavaScript will redefine the array to a standard object, 
+and some array methods and properties will produce undefined 
+or incorrect results.</p>
+
+<p id="demonamedindex"></p>
+
+<script>
+var person = [];
+person["firstName"] = "John";
+person["lastName"] = "Doe";
+person["age"] = 46; 
+document.getElementById("demonamedindex").innerHTML =
+person[0] + " " + person.length;
+</script>
+
+
+<h2>JavaScript Arrays</h2>
+<p>Avoid using new Array(). Use [] instead.</p>
+
+<p id="demoavoidnew"></p>
+
+<script>
+//var points = new Array(40, 100, 1, 5, 25, 10);
+var points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demoavoidnew").innerHTML = points[0];  
+</script>
+
+
+<p>
+How to Recognize an Array
+A common question is: How do I know if a variable is an array?
+
+The problem is that the JavaScript operator typeof returns "object":
+</p>
+<h2>JavaScript Arrays</h2>
+<p>The typeof operator, when used on an array, returns object:
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+typeof fruits;    // returns object
+</p>
+
+<p id="demoobject"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demoobject").innerHTML = typeof fruits;
+</script>
+
+<p>
+The typeof operator returns object because a JavaScript array is an object.
+
+Solution 1:
+To solve this problem ECMAScript 5 defines a new method Array.isArray():
+
+Array.isArray(fruits);   // returns true
+The problem with this solution is that ECMAScript 5 is not supported in older browsers.
+<p>
+
+<h2>JavaScript Arrays</h2>
+
+<p>The new ECMASCRIPT 5 method isArray returns true when used on an array:</p>
+
+<p id="demoisarray"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demoisarray").innerHTML = Array.isArray(fruits);
+</script>
+
+
+<p>
+Solution 2:
+To solve this problem you can create your own isArray() function:
+
+function isArray(x) {
+  return x.constructor.toString().indexOf("Array") > -1;
+}
+The function above always returns true if the argument is an array.
+
+Or more precisely: it returns true if the object prototype contains the word "Array".
+</p>
+
+<p>This "home made" isArray() function returns true when used on an array:</p>
+
+<p id="demohomemade"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demohomemade").innerHTML = isArray(fruits);
+
+function isArray(myArray) {
+  return myArray.constructor.toString().indexOf("Array") > -1;
+}
+</script>
+
+
+
+
+<p>
+Solution 3:
+The instanceof operator returns true if an object is created by a given constructor:
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+fruits instanceof Array;   // returns true
+</p>
+
+
+<p>The instanceof operator returns true when used on an array:</p>
+
+<p id="demoinstanceof"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demoinstanceof").innerHTML = fruits instanceof Array;
+</script>
+
+
+
+</body>
+</html>
+

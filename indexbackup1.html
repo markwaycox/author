@@ -4,67 +4,20 @@
 
 <head>
 <script src="jquery-3.3.1.js"></script>
-<script src="https://apis.google.com/js/api.js"></script>
-
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>index.html</title>
 
+<!--<link rel = "stylesheet" type = "text/css" href = "main.css" />-->
+
+
 <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-<!-- I don't think I need the cloudfare link anymore
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baskervville">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 
-<!--Blogger API starts here-->
-<script>
-var apikeywasloc = ("AIzaSyD0GUS7qMgl2zmSNu80u2S6yJpl4aUAZKI");
-var clientidwasloc = ("388795811004-ajlip5bd848f50pqkrs0tgtsi5gjl8gp.apps.googleusercontent.com");
-var blogidwas = ("4598687558800913495");
-var pagesidpage1 = ("82293740354684109");
-
-
-
- 
-<!--Code for creditial authorization and Blogger API Get request-->
-  function authenticate() {
-    return gapi.auth2.getAuthInstance()
-        .signIn({scope: "https://www.googleapis.com/auth/blogger https://www.googleapis.com/auth/blogger.readonly"})
-        .then(function() { console.log("Sign-in successful"); },
-              function(err) { console.error("Error signing in", err); });
-  }
-  function loadClient() {
-    gapi.client.setApiKey("AIzaSyD0GUS7qMgl2zmSNu80u2S6yJpl4aUAZKI");
-    return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/blogger/v3/rest")
-        .then(function() { console.log("GAPI client loaded for API"); },
-              function(err) { console.error("Error loading GAPI client for API", err); });
-  }
-  // Make sure the client is loaded and sign-in is complete before calling this method.
-  function execute() {
-    return gapi.client.blogger.pages.get({
-      "blogId": "4598687558800913495",
-      "pageId": "82293740354684109",
-      "view": "ADMIN"
-    })
-        .then(function(response) {
-                // Handle the results here (response.result has the parsed body).
-                console.log("Response", response);
-				var arrayblog = [];
-				arrayblog.push(response);
-				webtoblogstr = (arrayblog[0].result.content);
-				var pid = document.getElementById("pblogtoweb1");
-				pid.innerHTML = (webtoblogstr);
-              },
-              function(err) { console.error("Execute error", err); });
-  }
-  gapi.load("client:auth2", function() {
-    gapi.auth2.init({client_id: "388795811004-ajlip5bd848f50pqkrs0tgtsi5gjl8gp.apps.googleusercontent.com"});
-  });
- 
-</script>
-<!--Blogger API ends here-->
 
 
 
@@ -472,9 +425,100 @@ Stay tuned-in for more later.
 </div>
 
 <br>
+
+
 <!--blogtoweb html ends here-->
 
+<!--blogtoweb javascript starts here-->
+<script>
 
+whateverorigin1was();
+function whateverorigin1was(){
+
+// this works $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html') + '&callback=?', function(data){
+	//alert(data.contents);
+$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('https://wasambetestshare.blogspot.com/p/blog-to-web-1.html') + '&callback=?', function(data){
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-2.html') + '&callback=?', function(data){
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-3.html') + '&callback=?', function(data){
+
+	results = (data.contents);
+	//console.log (results);
+	var str = (results); 
+  var n1 = str.search("<div class='post-body");
+ var n2 = str.search("class='post-bottom");
+    var res = str.substring(n1, n2);
+   document.getElementById("pblogtoweb1").innerHTML = res;
+		});
+	}	
+
+
+//whateverorigin1();
+//whateverorigin2();
+//whateverorigin3();
+//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html
+
+
+function whateverorigin1(){
+
+// this works $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html') + '&callback=?', function(data){
+	//alert(data.contents);
+$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-1.html') + '&callback=?', function(data){
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-2.html') + '&callback=?', function(data){
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-3.html') + '&callback=?', function(data){
+
+	results = (data.contents);
+	//console.log (results);
+	var str = (results); 
+  var n1 = str.search("<div class='post-body");
+ var n2 = str.search("class='post-bottom");
+    var res = str.substring(n1, n2);
+   document.getElementById("pblogtoweb1").innerHTML = res;
+		});
+	}	
+
+
+
+
+function whateverorigin2(){
+
+// this works $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html') + '&callback=?', function(data){
+	//alert(data.contents);
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-1.html') + '&callback=?', function(data){
+$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-2.html') + '&callback=?', function(data){
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-3.html') + '&callback=?', function(data){
+
+	results = (data.contents);
+	//console.log (results);
+	var str = (results); 
+  var n1 = str.search("<div class='post-body");
+ var n2 = str.search("class='post-bottom");
+    var res = str.substring(n1, n2);
+   document.getElementById("pblogtoweb2").innerHTML = res;
+		});
+	}	
+
+
+
+function whateverorigin3(){
+
+// this works $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html') + '&callback=?', function(data){
+	//alert(data.contents);
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-1.html') + '&callback=?', function(data){
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-2.html') + '&callback=?', function(data){
+$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://markwaycoxauthor.blogspot.com/p/blog-to-web-3.html') + '&callback=?', function(data){
+
+	results = (data.contents);
+	//console.log (results);
+	var str = (results); 
+  var n1 = str.search("<div class='post-body");
+ var n2 = str.search("class='post-bottom");
+    var res = str.substring(n1, n2);
+   document.getElementById("pblogtoweb3").innerHTML = res;
+		});
+	}	
+
+</script>
+<!--javascript html ends here-->
 
 
 
@@ -491,8 +535,6 @@ Stay tuned-in for more later.
  </div>
 
 
-<button onclick="authenticate().then(loadClient)">authorize and load</button>
-<button onclick="execute()">execute</button>
 
 </body>
 </html> 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-3.3.1.js"></script>
+<script src="https://apis.google.com/js/api.js"></script>
+
+<script>
+//var will go here
+var results = "";
+var tv = "";
+
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+<!--Blogger API starts here-->
+<!--Code for creditial authorization and Blogger API Get request-->
+<script>
+  function authenticate() {
+    return gapi.auth2.getAuthInstance()
+        .signIn({scope: "https://www.googleapis.com/auth/blogger https://www.googleapis.com/auth/blogger.readonly"})
+        .then(function() { console.log("Sign-in successful"); },
+              function(err) { console.error("Error signing in", err); });
+  }
+  function loadClient() {
+    gapi.client.setApiKey("AIzaSyD0GUS7qMgl2zmSNu80u2S6yJpl4aUAZKI");
+    return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/blogger/v3/rest")
+        .then(function() { console.log("GAPI client loaded for API"); },
+              function(err) { console.error("Error loading GAPI client for API", err); });
+  }
+  // Make sure the client is loaded and sign-in is complete before calling this method.
+  function execute() {
+    return gapi.client.blogger.pages.get({
+      "blogId": "4598687558800913495",
+      "pageId": "82293740354684109",
+      "view": "ADMIN"
+    })
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+				var arrayblog = [];
+				arrayblog.push(response);
+				webtoblogstr = (arrayblog[0].result.content);
+				var pid = document.getElementById("pblogtoweb1");
+				pid.innerHTML = (webtoblogstr);
+              },
+              function(err) { console.error("Execute error", err); });
+  }
+  gapi.load("client:auth2", function() {
+    gapi.auth2.init({client_id: "388795811004-ajlip5bd848f50pqkrs0tgtsi5gjl8gp.apps.googleusercontent.com"});
+  });
+  
+  
+
+</script>
+<!--Blogger API ends here-->
+
+
+<button onclick="authenticate().then(loadClient)">authorize and load</button>
+<button onclick="execute()">execute</button>
+<p id="pid"></p>
+<p id="pblogtoweb1">pblogtoweb1</p>
+
+</body>
+
+
