@@ -23,13 +23,15 @@
 var apikeywasloc = ("AIzaSyD0GUS7qMgl2zmSNu80u2S6yJpl4aUAZKI");
 var clientidwasloc = ("388795811004-ajlip5bd848f50pqkrs0tgtsi5gjl8gp.apps.googleusercontent.com");
 var blogidwas = ("4598687558800913495");
-var pagesidpage1 = ("82293740354684109");
+var pagesidpage1was = ("82293740354684109");
 
 var apikeymark = ("AIzaSyDmc5hL--7l3tgoLD4Mazo-VR1kbntsc_g");
 var clientidmark = ("1062200444931-puj852fejs7qt3ocj4q6uctgk0e6jnub.apps.googleusercontent.com");
 var blogidmark = ("4638756093340364042");
 var pagesidpage1 = ("7159737437289802786");
 var pagesidpage2 = ("8588571911499708426");
+var pagesidpage3 = ("621882646455055154");
+
 
 
 
@@ -50,11 +52,21 @@ var pagesidpage2 = ("8588571911499708426");
         .then(function() { console.log("GAPI client loaded for API"); },
               function(err) { console.error("Error loading GAPI client for API", err); });
   }
+  
+  
+  
   // Make sure the client is loaded and sign-in is complete before calling this method.
-  function execute() {
-    return gapi.client.blogger.pages.get({
+  //executeloop starts here
+  function executeloop(){
+ execute1();
+  
+  
+  
+  //execute1 starts here
+  function execute1() {
+	    return gapi.client.blogger.pages.get({
       "blogId": "4638756093340364042",
-      "pageId": "8588571911499708426",
+      "pageId": "7159737437289802786",
       "view": "ADMIN"
     })
         .then(function(response) {
@@ -65,9 +77,59 @@ var pagesidpage2 = ("8588571911499708426");
 				webtoblogstr = (arrayblog[0].result.content);
 				var pid = document.getElementById("pblogtoweb1");
 				pid.innerHTML = (webtoblogstr);
+				execute2();
               },
               function(err) { console.error("Execute error", err); });
   }
+  //execute1 starts here
+  
+ 
+ //execute2 starts here
+  function execute2() {
+	    return gapi.client.blogger.pages.get({
+      "blogId": "4638756093340364042",
+      "pageId": "8588571911499708426",
+      "view": "ADMIN"
+    })
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+				var arrayblog = [];
+				arrayblog.push(response);
+				webtoblogstr = (arrayblog[0].result.content);
+				var pid = document.getElementById("pblogtoweb2");
+				pid.innerHTML = (webtoblogstr);
+				execute3();
+              },
+              function(err) { console.error("Execute error", err); });
+  }
+  //execute2 ends here
+  
+  
+   //execute3 starts here
+  function execute3() {
+	    return gapi.client.blogger.pages.get({
+      "blogId": "4638756093340364042",
+      "pageId": "621882646455055154",
+      "view": "ADMIN"
+    })
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+				var arrayblog = [];
+				arrayblog.push(response);
+				webtoblogstr = (arrayblog[0].result.content);
+				var pid = document.getElementById("pblogtoweb3");
+				pid.innerHTML = (webtoblogstr);
+              },
+              function(err) { console.error("Execute error", err); });
+  }
+  //execute3 ends here
+
+  
+ } 
+ //executeloop ends here 
+  
   gapi.load("client:auth2", function() {
     gapi.auth2.init({client_id: "1062200444931-puj852fejs7qt3ocj4q6uctgk0e6jnub.apps.googleusercontent.com"});
   });
@@ -501,7 +563,7 @@ Stay tuned-in for more later.
 
 
 <button onclick="authenticate().then(loadClient)">authorize and load</button>
-<button onclick="execute()">execute</button>
+<button onclick="executeloop()">execute</button>
 
 </body>
 </html> 
