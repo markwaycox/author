@@ -699,7 +699,12 @@ Stay tuned-in for more later.
  <p>Footer will go here</p>
  </div>
 
+<script>
+document.getElementById("pblogtoweb1").innerHTML = localStorage.getItem("blogtowebstr1");
+document.getElementById("pblogtoweb2").innerHTML = localStorage.getItem("blogtowebstr2");
+document.getElementById("pblogtoweb3").innerHTML = localStorage.getItem("blogtowebstr3");
 
+</script>
 <button onclick="authenticate().then(loadClient)">authorize and load</button>
 <button onclick="executeloop()">execute</button>
 
