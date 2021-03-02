@@ -55,107 +55,15 @@ var pagesidpage3 = ("621882646455055154");
   
   
   
-  
-  
-   // Make sure the client is loaded and sign-in is complete before calling this method.
-  function executeloop() {
-  execute1();
-  
-   //execute1 starts here
-  function execute1(){
-    return gapi.client.blogger.pages.get({
-      "blogId": "4638756093340364042",
-      "pageId": "7159737437289802786",
-      "view": "ADMIN"
-    })
-        .then(function(response) {
-                // Handle the results here (response.result has the parsed body).
-                console.log("Response", response);
-				var arrayblog = [];
-				arrayblog.push(response);
-				blogtowebstr1 = (arrayblog[0].result.content);
-				var pid = document.getElementById("pblogtoweb1");
-				pid.innerHTML = (blogtowebstr1);
-				localStorage.setItem("blogtowebstr1", blogtowebstr1);
-			// Retrieve
-//document.getElementById("blogtowebstr2").innerHTML = localStorage.getItem("blogtowebstr2");
-execute2();
-              },
-              function(err) { console.error("Execute error", err); });
-  
-  }
-  //execute1 ends here
-
- //execute2 starts here
-  function execute2() {
-	    return gapi.client.blogger.pages.get({
-      "blogId": "4638756093340364042",
-      "pageId": "8588571911499708426",
-      "view": "ADMIN"
-    })
-        .then(function(response) {
-                // Handle the results here (response.result has the parsed body).
-                console.log("Response", response);
-				var arrayblog = [];
-				arrayblog.push(response);
-				blogtowebstr2 = (arrayblog[0].result.content);
-				var pid = document.getElementById("pblogtoweb2");
-				pid.innerHTML = (blogtowebstr2);
-				localStorage.setItem("blogtowebstr2", blogtowebstr2);
-// Retrieve
-//document.getElementById("blogtowebstr2").innerHTML = localStorage.getItem("blogtowebstr2");
-
-				execute3();
-              },
-              function(err) { console.error("Execute error", err); });
-  }
-  //execute2 ends here
-
-  //execute3 starts here
-  function execute3() {
-	    return gapi.client.blogger.pages.get({
-      "blogId": "4638756093340364042",
-      "pageId": "621882646455055154",
-      "view": "ADMIN"
-    })
-        .then(function(response) {
-                // Handle the results here (response.result has the parsed body).
-                console.log("Response", response);
-				var arrayblog = [];
-				arrayblog.push(response);
-				blogtowebstr3 = (arrayblog[0].result.content);
-				var pid = document.getElementById("pblogtoweb3");
-				pid.innerHTML = (blogtowebstr3);
-				localStorage.setItem("blogtowebstr3", blogtowebstr3);
-// Retrieve
-//document.getElementById("blogtowebstr3").innerHTML = localStorage.getItem("blogtowebstr3");
-
-              },
-              function(err) { console.error("Execute error", err); });
-  }
-  //execute3 ends here
-
- 
-  
-  }
-  gapi.load("client:auth2", function() {
-    gapi.auth2.init({client_id: "1062200444931-puj852fejs7qt3ocj4q6uctgk0e6jnub.apps.googleusercontent.com"});
-  });
-  
-  
-  
-  
-  
-  
   // Make sure the client is loaded and sign-in is complete before calling this method.
   //executeloop starts here
-  function executeloopORI(){
+  function executeloop(){
  execute1();
   
   
   
   //execute1 starts here
-  function execute1ORI() {
+  function execute1() {
 	    return gapi.client.blogger.pages.get({
       "blogId": "4638756093340364042",
       "pageId": "7159737437289802786",
@@ -169,6 +77,11 @@ execute2();
 				blogtowebstr1 = (arrayblog[0].result.content);
 				var pid = document.getElementById("pblogtoweb1");
 				pid.innerHTML = (blogtowebstr1);
+				// Store
+localStorage.setItem("blogtowebstr1", blogtowebstr1);
+// Retrieve
+//document.getElementById("pblogtoweb1").innerHTML = localStorage.getItem("blogtowebstr1");
+
 				execute2();
               },
               function(err) { console.error("Execute error", err); });
@@ -177,7 +90,7 @@ execute2();
   
  
  //execute2 starts here
-  function execute2ORI() {
+  function execute2() {
 	    return gapi.client.blogger.pages.get({
       "blogId": "4638756093340364042",
       "pageId": "8588571911499708426",
@@ -203,7 +116,7 @@ execute2();
   
   
    //execute3 starts here
-  function execute3ORI() {
+  function execute3() {
 	    return gapi.client.blogger.pages.get({
       "blogId": "4638756093340364042",
       "pageId": "621882646455055154",
