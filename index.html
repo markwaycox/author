@@ -25,6 +25,14 @@ var clientidwasloc = ("388795811004-ajlip5bd848f50pqkrs0tgtsi5gjl8gp.apps.google
 var blogidwas = ("4598687558800913495");
 var pagesidpage1 = ("82293740354684109");
 
+var apikeymark = ("AIzaSyDmc5hL--7l3tgoLD4Mazo-VR1kbntsc_g");
+var clientidmark = ("1062200444931-puj852fejs7qt3ocj4q6uctgk0e6jnub.apps.googleusercontent.com");
+var blogidmark = ("4638756093340364042");
+var pagesidpage1 = ("7159737437289802786");
+
+
+
+
 
 
  
@@ -36,7 +44,7 @@ var pagesidpage1 = ("82293740354684109");
               function(err) { console.error("Error signing in", err); });
   }
   function loadClient() {
-    gapi.client.setApiKey("AIzaSyD0GUS7qMgl2zmSNu80u2S6yJpl4aUAZKI");
+    gapi.client.setApiKey("AIzaSyDmc5hL--7l3tgoLD4Mazo-VR1kbntsc_g");
     return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/blogger/v3/rest")
         .then(function() { console.log("GAPI client loaded for API"); },
               function(err) { console.error("Error loading GAPI client for API", err); });
@@ -44,8 +52,8 @@ var pagesidpage1 = ("82293740354684109");
   // Make sure the client is loaded and sign-in is complete before calling this method.
   function execute() {
     return gapi.client.blogger.pages.get({
-      "blogId": "4598687558800913495",
-      "pageId": "82293740354684109",
+      "blogId": "4638756093340364042",
+      "pageId": "7159737437289802786",
       "view": "ADMIN"
     })
         .then(function(response) {
@@ -60,7 +68,7 @@ var pagesidpage1 = ("82293740354684109");
               function(err) { console.error("Execute error", err); });
   }
   gapi.load("client:auth2", function() {
-    gapi.auth2.init({client_id: "388795811004-ajlip5bd848f50pqkrs0tgtsi5gjl8gp.apps.googleusercontent.com"});
+    gapi.auth2.init({client_id: "1062200444931-puj852fejs7qt3ocj4q6uctgk0e6jnub.apps.googleusercontent.com"});
   });
  
 </script>
