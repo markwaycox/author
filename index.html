@@ -32,12 +32,6 @@ var pagesidpage1 = ("7159737437289802786");
 var pagesidpage2 = ("8588571911499708426");
 var pagesidpage3 = ("621882646455055154");
 
-
-
-
-
-
-
  <!-- Process to load blog into website -->
  /*
  Mark will write his blog that he wants automatically displayed on his website 
@@ -406,6 +400,25 @@ font-size: 27px;
   display: table;
   clear: both;
  }
+ 
+ /* Hide these book covers in Website view  */
+ .rowbookcoversmobile {
+ display: none;
+ }
+ 
+ /* Responsive layout displays these book covers in mobile view */
+@media screen and (max-width: 600px) {
+  .rowbookcoversmobile {
+     display: table;
+  }
+  
+   .rowbookcovers {
+     display: none;
+  }
+}
+ 
+ 
+ 
 
 /* Responsive layout - makes the two columns stack on top of each 
 other instead of next to each other */
@@ -616,18 +629,23 @@ font-family: 'Baskervville', serif;
 <br>
 <br>
 -->
+Hello, meet Mark
 
-	
-I’m the author of three, new promising novels. 
-I also teach kid’s English for fun. When I’m not pumping out incredible material, 
-I travel the globe absorbing culture. My blog, <a class="lituplitstyle" 
+I’m the author of three promising novels. Excitingly, a fourth manuscript, 
+a Memoir, is baking in the oven. I also teach children ESL. When I’m not 
+creating interesting material in my hometown, Philadelphia, I’m often 
+traveling the globe absorbing the culture in some exotic place. At this 
+point, I am about having FUN in life! 
+<br>	
+<br>
+Well-being: a vital phrase that offers the best-case-scenario for 
+health & harmony on this planet. My blog, <a class="lituplitstyle" 
 href="https://markwaycoxauthor.blogspot.com/">LIT UP LIT</a>
-, lends a platform for 
-the examination of explosive literature and other art that shed insights into 
-today’s most pressing happenings. The species of this planet are under serious 
-duress & threat. <a class="lituplitstyle" href="https://markwaycoxauthor.blogspot.com/">LIT UP LIT’s</a> 
-pledge is to shine the spotlight on accountability, 
-a commodity appearing increasingly less and less.</p>      
+, lends a platform 
+for the examination of health & wellness topics through creative, 
+at times explosive, literature and other art forms with the intention of 
+providing key insights into today’s pressing issues. 
+</p>      
 
 <p class="pintro" >
 Mark W. Aycox    
@@ -667,6 +685,36 @@ Mark W. Aycox
   <div class="columnbookcovers" style="background-color:#ffffff;">
    <img src="images/scentofsevenlettersback.jpg" alt="scentofsevenlettersback.jpg" class="imgintro">
   </div>
+</div>
+
+<br>
+
+<div class="rowbookcoversmobile">
+ <div class="columnbookcovers" style="background-color:#ffffff;">
+    <img src="images/onemorerepfront.jpg" alt="onemorerepfront.jpg" class="imgintro">
+  </div>
+  
+   <div class="columnbookcovers" style="background-color:#ffffff;">
+    <img src="images/onemorerepback.jpg" alt="onemorerepback.jpg" class="imgintro">
+  </div>
+  
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img src="images/onestonefront.jpg" alt="onestonefront.jpg" class="imgintro">
+  </div>
+  
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img src="images/onestoneback.jpg" alt="onestoneback.jpg" class="imgintro">
+  </div>
+  
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img src="images/scentofsevenlettersfront.jpg" alt="scentofsevenlettersfront.jpg" class="imgintro">
+  </div>
+
+
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img src="images/scentofsevenlettersback.jpg" alt="scentofsevenlettersback.jpg" class="imgintro">
+  </div>
+
 </div>
 
 <br>
