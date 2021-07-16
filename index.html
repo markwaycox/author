@@ -352,8 +352,94 @@ font-family: 'Baskervville', serif;
         font-size: 32px;
 		}
 		
-		
-		
+
+/* Start Style Image Zoom Enlarge OnClick */		
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+/* Start Style Image Zoom Enlarge OnClick */			
 		
 
 
@@ -429,6 +515,23 @@ Mark W. Aycox
 <h3>BOOKS...</h3>
 </div>
 
+
+
+<!--
+This code will make book covers enlarge onclick
+<img id="myImg" src="img_snow.jpg" alt="Snow" style="width:100%;max-width:300px"> 
+
+<img id='myImg' src="images/onemorerepback.jpg" alt="onemorerepback.jpg" class="imgintro">
+
+
+ The Modal 
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+-->
+
 <br>
 
 <div class="rowbookcovers">
@@ -446,7 +549,7 @@ Mark W. Aycox
 
 <div class="rowbookcovers">
   <div class="columnbookcovers" style="background-color:#ffffff;">
-    <img src="images/onemorerepback.jpg" alt="onemorerepback.jpg" class="imgintro">
+  <img src="images/onemorerepback.jpg" alt="onemorerepback.jpg" class="imgintro">
   </div>
   <div class="columnbookcovers" style="background-color:#ffffff;">
    <img src="images/onestoneback.jpg" alt="onestoneback.jpg" class="imgintro">
@@ -570,7 +673,6 @@ Stay tuned-in for more later.
 <noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/blogspot/zbyvi"></a><br/>Powered by FeedBurner</p> </noscript>
 -->
 
-
 <!--Mark's LitUpLit-->
 <script src="https://feeds.feedburner.com/blogspot/uihigg?format=sigpro" type="text/javascript" ></script>
 <noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/blogspot/uihigg"></a><br/>Powered by FeedBurner</p> </noscript>
@@ -578,7 +680,12 @@ Stay tuned-in for more later.
 
 <script>
 console.log ('my script follows');
+//This is Mark Element ID
 var marksblogspotid = document.getElementById('blogspot/uihigg78ks0g9k2qe2le317t5q115s9s');
+//This is Wasambe Element ID 
+//var marksblogspotid = document.getElementById('blogspot/zbyviljsul8mkd095fen2d4ve2chgrg');
+
+//var sel = marksblogspotid.ul.li:nth-child(1).div
 var childrenul = marksblogspotid.children[1];
 
 var childrenli0 = childrenul.children[0];
@@ -598,9 +705,49 @@ document.getElementById("pblogtoweb1").innerHTML = (blogtoweb2);
 document.getElementById("pblogtoweb2").innerHTML = (blogtoweb1);
 document.getElementById("pblogtoweb3").innerHTML = (blogtoweb0);
 
+//This is Mark Element ID
 document.getElementById("blogspot/uihigg78ks0g9k2qe2le317t5q115s9s").style.visibility = "hidden";
+//This is Wasambe Element ID
+//document.getElementById('blogspot/zbyviljsul8mkd095fen2d4ve2chgrg').style.visibility = "hidden";
 
 </script>
+
+<!--
+This code will make book covers enlarge on click
+-->
+<script>
+// Get the modal
+/*
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+*/
+</script>
+
+<script>
+window.onclick = e => {
+    console.log(e.target);
+	console.log(e.target.src);
+    console.log(e.target.id); //,  -->', e.target.innerHTML);
+}
+</script>
+
 
 </body>
 </html> 
