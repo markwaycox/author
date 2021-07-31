@@ -3,110 +3,788 @@
 
 
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="jquery-3.3.1.js"></script>
+<script src="https://apis.google.com/js/api.js"></script>
+
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>index.html</title>
 
-
-
-
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<!-- I don't think I need the cloudfare link anymore
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baskervville">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+
+
+<style>
+* {box-sizing: border-box}
+
+/* div for holding Mark's name */
+.divnamewrapper{
+ text-align: center;
+  font-family: 'Tangerine', serif;
+        font-size: 32px;
+		}
+
+.divname{
+ font-family: 'Tangerine', serif;
+        font-size: 32px;
+		width: 100%;
+		margin: auto;
+		text-align: center;
+}
+	
+
+/* Nav Menu */
+.navbarwrapper{
+width: 40%;
+margin: auto;
+}
+
+.navbar {
+  width: 100%;
+  background-color: white;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: black;
+  text-decoration: none;
+    width: 25%; /* Four links of equal widths */
+  text-align: center;
+    padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  background-color: none;
+}
+
+.navbar a.active {
+  background-color: none;
+}
+
+/* Makes Nav Menu Items vertical and centered on mobile device */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+
+
+/*Styke Intro*/
+/* Create two equal columns that floats next to each other */
+.columnintro {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  }
+  
+  
+  /* p for Mark's Bio Intro */
+.pintro{
+ text-align: left;
+  font-family: 'Baskervville', serif;
+        font-size: 18px;
+		}
+		
+/* styles LIT UP LIT font */		
+		.lituplitstyle{
+		 font-family: 'Roboto', serif;
+		 color: red;
+		}
+		
+		/*  */		
+		.imglogosmall{
+		 height=30px;
+		 width=30px;
+		}
+  
+  
+/* Center imgage inside its column*/
+.imgintro {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.rowintro:after {
+  content: "";
+  display: table;
+  clear: both;
+ }
+
+/* Responsive layout - makes the two columns stack on top of each 
+other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .columnintro {
+    width: 100%;
+  }
+}
+
+
+/* Style "BOOKS" */
+.rowbooksheader{
+text-align: center;
+font-size: 27px;
+}
+
+
+/* Style Row of Book Covers   */
+/* Create three equal columns that floats next to each other */
+.columnbookcovers {
+  float: left;
+  width: 33.33%;
+ 
+  padding: 10px;
+  }
+  
+  
+/* Center imgage inside its column*/
+.imgbookcovers {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+   height: 800px;
+}
+
+/* Clear floats after the columns */
+.rowbookcovers:after {
+  content: "";
+  display: table;
+  clear: both;
+ }
+ 
+ /* Hide these book covers in Website view  */
+ .rowbookcoversmobile {
+ display: none;
+ }
+ 
+ /* Responsive layout displays these book covers in mobile view */
+@media screen and (max-width: 600px) {
+  .rowbookcoversmobile {
+     display: table;
+  }
+  
+   .rowbookcovers {
+     display: none;
+  }
+}
+ 
+ 
+ 
+
+/* Responsive layout - makes the two columns stack on top of each 
+other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .columnbookcovers {
+    width: 100%;
+  }
+}
+
+/* Style "intheworks" */
+.rowintheworks{
+//text-align: center;
+//font-size: 27px;
+}
+
+
+/* Style Row of in the works   */
+/* Create columns that floats next to each other */
+.columnintheworks {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  }
+  
+  
+  
+  .pintheworks {
+  font-family: 'Baskervville', serif;
+        font-size: 18px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-right: 450px;
+  margin-left: 250px;
+}
+  
+ 
+  
+
+/* Clear floats after the columns */
+.rowintheworks:after {
+  content: "";
+  display: table;
+  clear: both;
+ }
+ 
+ 
+ /* Responsive layout .columnintheworks- in the works */
+@media screen and (max-width: 600px) {
+  .columnintheworks {
+    width: 100%;
+  }
+}
+
+ /* Responsive layout .pintheworks in the works */
+@media screen and (max-width: 600px) {
+  .pintheworks {
+    margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  }
+}
+
+ 
+
+
+
+/*Style blogtoweb starts here */
+/* Style "rowblogtoweb" */
+.rowblogtoweb{
+font-family: 'Baskervville', serif;
+      }
+
+
+/* Style columnblogtoweb  */
+/* Create three equal columns that floats next to each other */
+.columnblogtoweb {
+  float: left;
+  width: 33.33%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+ 
+		background-color: white;
+  }
+  
+ 
+
+/* Clear floats after the row/columns */
+.rowblogtoweb:after {
+  content: "";
+  display: table;
+  clear: both;
+ }
+
+
+ /* Responsive layout .columnblogtoweb in the works */
+@media screen and (max-width: 600px) {
+  .columnblogtoweb {
+    width: 100%;
+  }
+}
+
+ /* Responsive layout .pblogtoweb1 in the works */
+@media screen and (max-width: 600px) {
+  .pblogtoweb1 {
+    margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  }
+}
+
+
+
+ /* Responsive layout .pblogtoweb2 in the works */
+@media screen and (max-width: 600px) {
+  .pblogtoweb2 {
+    margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  }
+}
+
+
+ /* Responsive layout .pblogtoweb3 in the works */
+@media screen and (max-width: 600px) {
+  .pblogtoweb3 {
+    margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  }
+  
+  
+  .columnblogtoweb {
+		border-style: solid;
+		border-radius: 25px;
+		margin: 5px, 5px, 5px, 5px;
+  }
+  
+}
+/*Style blogtowe ends here */
+
+
+
+/* Contact ME */
+.divcontactme{
+ text-align: center;
+  font-family: 'Tangerine', serif;
+        font-size: 32px;
+		}
+
+/* FOOTER */
+.divfooter{
+ text-align: center;
+  font-family: 'Tangerine', serif;
+        font-size: 32px;
+		}
+		
+
+/* Start Style Image Zoom Enlarge OnClick */		
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+/* Start Style Image Zoom Enlarge OnClick */			
+		
+
+
+</style>
+</header>
 
 <body>
+<div id="content"></div>
+<div class="divnamewrapper">
+ <p>Mark W. Aycox</p>
+ </div>
 
 
-<div id='divinnertext'>
-
+<div class="navbarwrapper">
+<div class="navbar">
+  <a href="index.html" class="active">Home</a>
+  <a href="mybio.html">My Bio</a>
+  <a href="mybooks.html">My Books</a>
+   <a href="https://markwaycoxauthor.blogspot.com/">My Blog</a>
+</div>
 </div>
 
-<div id='divinnerhtml'>
-
-</div>
 
 
-<div id='divtextcontent'>
+<br>
 
-</div>
+  <img src="images/penmark3.jpg" alt="no photo available" style="width:100%">
+
+<br>
+
+<div class="rowintro">
+  <div class="columnintro" style="background-color:#ffffff;">
+    <img src="images/markintro.png" alt="markintro.png" class="imgintro">
+  </div>
+  <div class="columnintro" style="background-color:#ffffff;">
+  
+  <p style="text-align:left; font-family: 'Baskervville', serif; font-size: 32px; font-Weight=900">Hi, meet Mark</p>
+    <p class="pintro" >
 
 
 <!--
-blog to web 1 all options
-
-<script src="http://feeds.feedburner.com/blogspot/efiti?format=sigpro" type="text/javascript" ></script><noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/blogspot/efiti"></a><br/>Powered by FeedBurner</p> </noscript>
-
-
-blog to web 1 page body id
-<script src="http://feeds.feedburner.com/blogspot/guvzz?format=sigpro" type="text/javascript" ></script><noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/blogspot/guvzz"></a><br/>Powered by FeedBurner</p> </noscript>
-
-
-
-blog main page item 1
-<script src="https://feeds.feedburner.com/blogspot/xtvssy?format=sigpro" type="text/javascript" ></script><noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/blogspot/xtvssy"></a><br/>Powered by FeedBurner</p> </noscript>
-
+<br>	
 <br>
 <br>
-3 items
-<script src="https://feeds.feedburner.com/blogspot/nekzl?format=sigpro" type="text/javascript" ></script><noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/blogspot/nekzl"></a><br/>Powered by FeedBurner</p> </noscript>
+<br>
 -->
+I’m the author of three promising novels. Excitingly, a fourth manuscript, 
+a Memoir, is baking in the oven. I also teach children ESL. When I’m not 
+creating interesting material in my hometown, Philadelphia, I’m often 
+traveling the globe absorbing the culture in some exotic place. At this 
+point, I am about having FUN in life! 
+<br>	
+<br>
+Well-being: a vital phrase that offers the best-case-scenario for 
+health & harmony on this planet. My blog, <a class="lituplitstyle" 
+href="https://markwaycoxauthor.blogspot.com/">LIT UP LIT</a>
+, lends a platform 
+for the examination of health & wellness topics through creative, 
+at times explosive, literature and other art forms with the intention of 
+providing key insights into today’s pressing issues. 
+</p>      
+
+<p class="pintro" >
+Mark W. Aycox    
+</p>
+
+  </div>
+</div>
+
+<br>
+
+<div class="rowbooksheader">
+<h3>BOOKS...</h3>
+</div>
 
 
 
 <!--
-feedburner outputs script with http:
-it will work on localhost but not online where it get mixed content error
-solution is to change http to https
-
-These script from Mark's blog
-<script src="http://feeds.feedburner.com/blogspot/ltzsm?format=sigpro" type="text/javascript" ></script><noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/blogspot/ltzsm"></a><br/>Powered by FeedBurner</p> </noscript>
-<script src="https://feeds.feedburner.com/blogspot/ltzsm?format=sigpro" type="text/javascript" ></script><noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/blogspot/ltzsm"></a><br/>Powered by FeedBurner</p> </noscript>
-
-These scripts from WasambeTestShare blog
-<script src="http://feeds.feedburner.com/blogspot/ltzsm?format=sigpro" type="text/javascript" ></script><noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/blogspot/ltzsm"></a><br/>Powered by FeedBurner</p> </noscript>
+This code will make book covers enlarge onclick
 -->
-<script src="https://feeds.feedburner.com/blogspot/zbyvi?format=sigpro" type="text/javascript" ></script><noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/blogspot/zbyvi"></a><br/>Powered by FeedBurner</p> </noscript>
+<img class="bookenlarge" id="myImg" src="images/snow.jpg" alt="Snow" style="width:100%;max-width:300px"> 
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
 
 <script>
 /*
-//Atom" href="https://markwaycoxauthor.blogspot.com/feeds/posts/default"
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+//var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.addEventListener("click", function(e) {
+//img.onclick = function(){
+console.log(e.target);
+console.log(e.target.class);
+console.log(img.className);
+	console.log(e.target.src);
+    console.log(e.target.id); 
+enlarge();
+ });
+ */
+  
 
 
-Atom" href="https://markwaycoxauthor.blogspot.com/feeds/posts/default" />
-<link rel="alternate" type="application/rss+xml" 
-title="LIT UP LIT - RSS" 
-href="https://markwaycoxauthor.blogspot.com/feeds/posts/default?alt=rss" />
-<link rel="service.post" type="application/atom+xml" 
-title="LIT UP LIT - Atom" 
-href="https://draft.blogger.com/feeds/4638756093340364042/posts/default" />
 
+function enlarge(){
+// Get the modal
+console.log (imgID);
+var modal = document.getElementById("myModal");
 
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById(imgID);
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+//img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = img.src;
+  captionText.innerHTML = img.alt;
+//}
 
-<link href='https://markwaycoxauthor.blogspot.com/favicon.ico' rel='icon' type='image/x-icon'/>
-<link href='https://markwaycoxauthor.blogspot.com/' rel='canonical'/>
-<link rel="alternate" type="application/atom+xml" title="LIT UP LIT - Atom" href="https://markwaycoxauthor.blogspot.com/feeds/posts/default" />
-<link rel="alternate" type="application/rss+xml" title="LIT UP LIT - RSS" href="https://markwaycoxauthor.blogspot.com/feeds/posts/default?alt=rss" />
-<link rel="service.post" type="application/atom+xml" title="LIT UP LIT - Atom" href="https://draft.blogger.com/feeds/4638756093340364042/posts/default" />
-<link rel="me" href="https://draft.blogger.com/profile/16195948748509762415" />
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-
-console.log ('my script follows');
-var testWorks = document.getElementById('blogspot/efiti7d44701eve1vlnugo007ql20k0');
-var test = document.getElementById("post-body-7159737437289802786");
-
-var testinnertext = test.innerText;
-
-var testinnerhtml = test.innerHTML;
-var testtextcontent = test.textContent;
-//var bloginnerhtml = blog1.innerHTML;
-//document.getElementById('divid').innerHTML = varblog1content;
-//var divinnertext = document.getElementById('divinnertext');
-//divinnertext.innerText = testinnertext;
-document.getElementById('divinnertext').innerText = testinnertext;
-document.getElementById('divinnerhtml').innerHTML = testinnerhtml;
-document.getElementById('divtextcontent').textContent = testtextcontent;
-*/
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+}
 </script>
 
 
 
+<br>
+
+<div class="rowbookcovers">
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+    <img class="bookenlarge" id='onemorerepfront' src="images/onemorerepfront.jpg" alt="onemorerepfront.jpg" class="imgintro">
+  </div>
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img class="bookenlarge" id='onestonefront' src="images/onestonefront.jpg" alt="onestonefront.jpg" class="imgintro">
+  </div>
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img class="bookenlarge" id='scentofsevenlettersfront' src="images/scentofsevenlettersfront.jpg" alt="scentofsevenlettersfront.jpg" class="imgintro">
+  </div>
+</div>
+
+<script>
+var body = document.getElementsByTagName("body")[0];
+body.addEventListener("click", function(e) {
+console.log(e.target);
+console.log(e.target.className);
+	console.log(e.target.src);
+    console.log(e.target.id); //,  -->', e.target.innerHTML);
+    //var item = e.target;
+	
+	if(e.target.className == 'bookenlarge'){
+	imgID = e.target.id;
+	enlarge();
+	}
+});
+</script>
+
+
+<div class="rowbookcovers">
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+  <img class="bookenlarge" id='onemorerepback' src="images/onemorerepback.jpg" alt="onemorerepback.jpg" class="imgintro">
+  </div>
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img class="bookenlarge" id='onestoneback' src="images/onestoneback.jpg" alt="onestoneback.jpg" class="imgintro">
+  </div>
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img class="bookenlarge" id='scentofsevenlettersback' src="images/scentofsevenlettersback.jpg" alt="scentofsevenlettersback.jpg" class="imgintro">
+  </div>
+</div>
+
+<br>
+
+<div class="rowbookcoversmobile">
+ <div class="columnbookcovers" style="background-color:#ffffff;">
+    <img src="images/onemorerepfront.jpg" alt="onemorerepfront.jpg" class="imgintro">
+  </div>
+  
+   <div class="columnbookcovers" style="background-color:#ffffff;">
+    <img id='onemorerepback' src="images/onemorerepback.jpg" alt="onemorerepback.jpg" class="imgintro">
+  </div>
+  
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img src="images/onestonefront.jpg" alt="onestonefront.jpg" class="imgintro">
+  </div>
+  
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img src="images/onestoneback.jpg" alt="onestoneback.jpg" class="imgintro">
+  </div>
+  
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img src="images/scentofsevenlettersfront.jpg" alt="scentofsevenlettersfront.jpg" class="imgintro">
+  </div>
+
+
+  <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img src="images/scentofsevenlettersback.jpg" alt="scentofsevenlettersback.jpg" class="imgintro">
+  </div>
+
+</div>
+
+<br>
+
+<div class="rowintheworks">
+  <div class="columnintheworks" style="background-color:black;">
+    <p class="pintheworks" style="color:white";>in the works<br><br><br><br>A Memoir is in the works:
+<br><br><span style="font-size:18px; font-weight:bold; color:red;">CREATING NEW CULTURE</span><br><br>
+I see it as comparable to acting, playing the same movie role time after time. It’s hard for me 
+admiring actors who are type-casted by Hollywood. I’ve imagined the greatest accomplishment I could 
+make as a <span style="font-weight:bold;">published author</span> would be to attempt several genres, of course doing so justly. 
+Up to now, my first novel, One More Rep, has a redemption storyline. The second, Scent of Seven 
+Letters, is a coming-of-age story. And One Stone, my third and most daring creation, is a murder 
+mystery – with a love story tossed in for good measure.<br><br> 
+While I was off to a diverse start, I wanted to stretch the boundaries even more with my next writing 
+venture. In different circles around me the genre, memoir, kept popping up. It seemed to me Memoir 
+had settled atop many reader’s favorite genre lists. Thinking about it, it dawned on me that not only 
+would this leap my writing diversity goal forward, but the overall experience would be extremely 
+cathartic as well. Together, the opportunity was simply too attractive to pass up. So, I started 
+reading up on the key characteristics of memoir writing. And immediately, the thing that surprised 
+me most was that all the details in a memoir must be completely true.  You can’t fabricate story 
+details for the sake of convenience or to hide your embarrassment. In times of so much falseness 
+in media, that rule actually appealed to me. I saw it as a form of accountability. (And) that is totally 
+lacking out there.<br><br>  
+The idea began to saturate me. I was just beginning a yoga teaching course back then, 
+just before the presidential election. My clever idea was to head down to Mexico to an Airbnb 
+apartment with rooftop access. Escape the noise, I salivated. With my beautiful girlfriend’s 
+blessing I would finish the course there and return a changed man. 
+A better man.<br><br>
+Settling into my apartment in Oaxaca de Juarez, things were going so smoothly that it felt awkward. 
+I can’t say at the time that I knew to take this as sign that many things in my life were 
+about to change. But that’s exactly what happened.<br><br>
+I want this Memoir: <span style="font-weight:bold;"><em>Almost Never Too Late</em></span>, 
+to help change the way we are looking at things.<br><br>  
+Stay tuned-in for more later.      
+          
+</div>
+  </div>
+
+<br>
+<br>
+
+<div class="rowbooksheader">
+<h3>...AND BLOGS</h3>
+</div>
+
+
+<!--blogtoweb html starts here-->
+<br>
+
+<div class="rowblogtoweb">
+  <div class="columnblogtoweb" style="background-color:#ffffff;">
+   <p id="pblogtoweb1">pblogtoweb1</p>
+  </div>
+  <div class="columnblogtoweb" style="background-color:#ffffff;">
+   <p id="pblogtoweb2">pblogtoweb2</p>
+  </div>
+  <div class="columnblogtoweb" style="background-color:#ffffff;">
+   <p id="pblogtoweb3">pblogtoweb3</p>
+  </div>
+</div>
+
+<br>
+<!--blogtoweb html ends here-->
+
+
+
+
+
+<br>
+<div class="divcontactme">
+ <h1 class="contactmeform"><a class="clickhref" href="https://markwaycoxauthorcontactme.blogspot.com/">Contact Me</a></h1>
+</div>
+
+<br>
+
+
+<div class="divfooter">
+ <p></p>
+ </div>
+
+<!--WasambeTestShare
+<script src="https://feeds.feedburner.com/blogspot/zbyvi?format=sigpro" type="text/javascript" ></script>
+<noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/blogspot/zbyvi"></a><br/>Powered by FeedBurner</p> </noscript>
+-->
+
+<!--Mark's LitUpLit-->
+<script src="https://feeds.feedburner.com/blogspot/uihigg?format=sigpro" type="text/javascript" ></script>
+<noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/blogspot/uihigg"></a><br/>Powered by FeedBurner</p> </noscript>
+
+
+<script>
+//console.log ('my script follows');
+//This is Mark Element ID
+var marksblogspotid = document.getElementById('blogspot/uihigg78ks0g9k2qe2le317t5q115s9s');
+//This is Wasambe Element ID 
+//var marksblogspotid = document.getElementById('blogspot/zbyviljsul8mkd095fen2d4ve2chgrg');
+
+//var sel = marksblogspotid.ul.li:nth-child(1).div
+var childrenul = marksblogspotid.children[1];
+
+var childrenli0 = childrenul.children[0];
+var childrendiv0 = childrenli0.children[2];
+var blogtoweb0 = childrendiv0.innerHTML;
+
+var childrenli1 = childrenul.children[1];
+var childrendiv1 = childrenli1.children[2];
+var blogtoweb1 = childrendiv1.innerHTML;
+
+var childrenli2 = childrenul.children[2];
+var childrendiv2 = childrenli2.children[2];
+var blogtoweb2 = childrendiv2.innerHTML;
+
+
+document.getElementById("pblogtoweb1").innerHTML = (blogtoweb2);
+document.getElementById("pblogtoweb2").innerHTML = (blogtoweb1);
+document.getElementById("pblogtoweb3").innerHTML = (blogtoweb0);
+
+//This is Mark Element ID
+document.getElementById("blogspot/uihigg78ks0g9k2qe2le317t5q115s9s").style.visibility = "hidden";
+//This is Wasambe Element ID
+//document.getElementById('blogspot/zbyviljsul8mkd095fen2d4ve2chgrg').style.visibility = "hidden";
+
+</script>
+
+
+<script>
+/*
+window.onclick = e => {
+    console.log(e.target);
+	console.log(e.target.src);
+    console.log(e.target.id); //,  -->', e.target.innerHTML);
+	enlarge();
+}
+*/	
+</script>
+
+
 </body>
-</html>
+</html> 
