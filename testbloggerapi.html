@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <title>Using Blogger API</title>
+	<script src="jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!--	<script> google.load("gdata", "3.0");</script>
+		<script>google.setOnLoadCallback(getMyBlogFeed);</script>  -->
+		
+		
+		
+		
+		<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.get("https://markwaycoxauthor.blogspot.com/", function(data, status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
+});
+</script>
+		
+  </head>
+  <body>
+    <div id="otp"></div>
+    <script>
+      function handleResponse(response) {
+        document.getElementById("otp").innerHTML += "<p>" + JSON.stringify(response) + "</p>";
+      }
+    </script>
+	<!--   
+	
+    <script	src="https://www.googleapis.com/blogger/v3/blogs/5641540552649250996?callback=handleResponse&key=keyhere">
+	-->
+	   </script>
+	  	  
+	   
+	   <p>
+	  
+</p>
+
+<button>Send an HTTP GET request to a page and get the result back</button>
+
+
+
+
+<script src="https://apis.google.com/js/api.js"></script>
+<script>
+  /**
+   * Sample JavaScript code for blogger.blogs.getByUrl
+   * See instructions for running APIs Explorer code samples locally:
+   * https://developers.google.com/explorer-help/guides/code_samples#javascript
+   */
+
+  function authenticate() {
+    return gapi.auth2.getAuthInstance()
+        .signIn({scope: "https://www.googleapis.com/auth/blogger https://www.googleapis.com/auth/blogger.readonly"})
+        .then(function() { console.log("Sign-in successful"); },
+              function(err) { console.error("Error signing in", err); });
+  }
+  function loadClient() {
+    gapi.client.setApiKey("AIzaSyD0GUS7qMgl2zmSNu80u2S6yJpl4aUAZKI");
+    return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/blogger/v3/rest")
+        .then(function() { console.log("GAPI client loaded for API"); },
+              function(err) { console.error("Error loading GAPI client for API", err); });
+  }
+  // Make sure the client is loaded and sign-in is complete before calling this method.
+  function execute() {
+    return gapi.client.blogger.blogs.getByUrl({})
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+              },
+              function(err) { console.error("Execute error", err); });
+  }
+  gapi.load("client:auth2", function() {
+    gapi.auth2.init({client_id: "YOUR_CLIENT_ID"});
+  });
+</script>
+<button onclick="authenticate().then(loadClient)">authorize and load</button>
+<button onclick="execute()">execute</button>
+
+
+
+
+
+
+  </body>
+  </html>
+  
+  
+  
